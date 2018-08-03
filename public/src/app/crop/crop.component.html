@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <button *ngIf="newROI" type="button" class="btn btn-primary" (click)="saveCrop()">Save</button>
+  <button type="button" class="btn btn-default pull-right" (click)="bsModalRef.hide()">Close</button>
+</div>
+<div class="modal-body">
+  <p class="lead" *ngIf="!imagePreviewSrc">Generating preview...</p>
+  <roi-selector
+    *ngIf="imagePreviewSrc" 
+    (roiChange)="roiChanged($event)" 
+    [imagePreviewSrc]="imagePreviewSrc"
+    [roi]="roi"></roi-selector>
+  <div class="clearfix"></div>
+</div>

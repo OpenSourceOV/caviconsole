@@ -1,0 +1,23 @@
+.preview-container {
+  position: relative;
+  background-color: #000000;
+  img {
+    -webkit-user-drag: none;    
+  }
+}
+
+.info {
+  position: absolute;
+  top: 2px; right: 4px;
+  // color: #007dff;
+  color: #ffffff;
+  padding: 2px;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

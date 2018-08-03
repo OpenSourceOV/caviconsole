@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col">
+    <data-plot [reloadData]="reloadData"></data-plot>
+  </div>
+</div>
+<div class="row mt-1" *ngIf="queueSummary">
+  <div class="col">
+    <hr />
+    <progressbar [max]="queueSummary.total" [value]="queueSummary.processed">
+      <span style="color:white; white-space:nowrap;"></span>
+    </progressbar>
+    <small>Processed {{queueSummary.processed}} / {{queueSummary.total}}</small>
+  </div>
+</div>    
+<div class="row">
+  <div class="col">
+    <hr />
+    <form>
+      <div class="form-row align-items-center">
+        <div class="col-auto"><button type="button" class="btn btn-primary" [ngClass]="{'btn-primary': ROIActive, 'btn-secondary': !ROIActive}" (click)="showROI()"><i class="fa fa-crop" aria-hidden="true"></i> Set ROI</button></div>
+        <div class="col-auto"><button type="button" class="btn btn-secondary" (click)="reload()" *ngIf="!ROIActive">Reload Data</button></div>
+        <label class="col-auto col-form-label" *ngIf="config.process.filtering_enabled == 'On'">Filter Threshold</label>
+        <div class="col-auto" *ngIf="config.process.filtering_enabled == 'On'"><input type="number" name="filterThreshold" placeholder="7" class="form-control" [(ngModel)]="config.process.filter_threshold"></div>
+        <div class="col-auto" *ngIf="config.process.filtering_enabled == 'On'">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" (click)="config.process.filter_threshold = config.process.filter_threshold - 1"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="config.process.filter_threshold = config.process.filter_threshold + 1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <div class="col-auto"><button type="button" class="btn btn-secondary" (click)="reprocess()"><i class="fa fa-repeat" aria-hidden="true"></i> Reprocess</button></div>
+        <div class="col-auto"><button type="button" class="btn btn-secondary" (click)="showLog()"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Log</button></div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+<form #processForm="ngForm" novalidate>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <div class="form-group row">
+        <label class="col-xs-12 col-md-4 col-form-label">Intermediates</label>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.intermediates_enabled" name="intermediates_enabled" value="On"> Yes
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.intermediates_enabled" name="intermediates_enabled" value="Off"> No
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-xs-12 col-md-4 col-form-label">Outlier Removal</label>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.outlier_removal_enabled" name="outlier_removal_enabled" value="On"> Enabled
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.outlier_removal_enabled" name="outlier_removal_enabled" value="Off"> Disabled
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-xs-12 col-md-4 col-form-label">Thresholding</label>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.thresholding_enabled" name="thresholding_enabled" value="On"> Enabled
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.thresholding_enabled" name="thresholding_enabled" value="Off"> Disabled
+            </label>
+          </div>
+        </div>
+      </div>    
+      <div class="form-group row">
+        <label class="col-xs-12 col-md-4 col-form-label">Filtering</label>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.filtering_enabled" name="filtering_enabled" value="On"> Enabled
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.filtering_enabled" name="filtering_enabled" value="Off"> Disabled
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="config.process.filtering_enabled">
+        <label class="col-xs-12 col-md-4 col-form-label">Filter Threshold</label>
+        <div class="col">
+          <input type="number" name="filterThreshold" placeholder="7" class="form-control" [(ngModel)]="config.process.filter_threshold">
+        </div>
+        <div class="col-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" (click)="config.process.filter_threshold = config.process.filter_threshold - 1"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="config.process.filter_threshold = config.process.filter_threshold + 1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+      <div class="form-group row">
+        <label class="col-xs-12 col-md-4 col-form-label">Data ROI</label>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.roi_enabled" name="roi_enabled" value="On"> Enabled
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.process.roi_enabled" name="roi_enabled" value="Off"> Disabled
+            </label>
+          </div>
+          <div class="row" *ngIf="config.process.roi_enabled == 'On'">
+            <div class="col">
+              <button type="button" class="btn btn-secondary" (click)="setROI()" *ngIf="configLoaded"><i class="fa fa-crop" aria-hidden="true"></i> Set ROI</button>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <hr />
+      <div class="d-flex justify-content-start">
+        <div>
+          <button type="button" class="btn mb-1 btn-primary" (click)="updateConfig()" *ngIf="processForm.valid && processForm.dirty">Update Config</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="configVisible = !configVisible" *ngIf="configLoaded">{{configVisible ? 'Hide' : 'Show'}} Config</button>    
+          <button type="button" class="btn mb-1 btn-secondary" (click)="showLog()"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Log</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="showQueue()"><i class="fa fa-list-ol" aria-hidden="true"></i> Queue</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="reprocess()"><i class="fa fa-repeat" aria-hidden="true"></i> Reprocess</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="exportData()"><i class="fa fa-repeat" aria-hidden="true"></i> Export Data</button>
+        </div>
+        <div class="ml-auto p-2" *ngIf="configLoaded">
+          <button type="button" class="btn mb-1 btn-lg btn-danger" (click)="stopProcessing()" *ngIf="configLoaded && processing">Stop</button>
+          <button type="button" class="btn mb-1 btn-lg btn-primary" (click)="startProcessing()" *ngIf="configLoaded && !processing && !processForm.dirty && processForm.valid">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="configVisible">
+    <div class="col">
+      <pre>{{ config | json }}</pre>
+    </div>
+  </div>
+</form>

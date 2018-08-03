@@ -1,0 +1,12 @@
+<div class="modal-header">
+  <button type="button" class="btn" [ngClass]="{'btn-primary':!streaming, 'btn-danger':streaming}" (click)="toggleStreaming()">{{streaming ? 'Stop' : 'Start Streaming'}}</button>
+  <div>
+    <button type="button" class="btn" [ngClass]="{'btn-secondary': !light, 'btn-primary': light}" (click)="piService.toggleLight()">Light <i class="fa fa-lightbulb-o" aria-hidden="true"></i></button>  
+    <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">Close</button>
+  </div>
+</div>
+<div class="modal-body">
+  <div id="cameraPreview">
+    <img *ngIf="streaming" [src]="streamingURL" class="rounded mx-auto d-block stream img-fluid" />
+  </div>  
+</div>

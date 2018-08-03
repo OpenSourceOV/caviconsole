@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row" *ngIf="connected">
+    <div class="col mb-4 mt-3">
+      <div class="btn-toolbar">
+        <div class="btn-group mr-2">
+          <button 
+            type="button" 
+            class="btn btn-sm" 
+            [ngClass]="{'btn-secondary': !light, 'btn-primary': light}" 
+            (click)="piService.toggleLight()" 
+            *ngIf="configLoaded && !capturing">
+            Light
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </button>
+          <button 
+            type="button" 
+            class="btn btn-secondary btn-sm" 
+            (click)="piService.restartPi()">
+            Restart
+            <i class="fa fa-undo" aria-hidden="true"></i>
+          </button> 
+          <button 
+            type="button" 
+            class="btn btn-secondary btn-sm" 
+            (click)="piService.shutdownPi()">
+            Shutdown
+          </button>
+        </div>
+      </div> 
+      <div class="nav nav-tabs">
+        <div class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/capture">Capture</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/process" *ngIf="configLoaded">Process</a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/data" *ngIf="configLoaded && dbConnected">Results</a>
+        </div>
+        <!-- <div class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/log" *ngIf="configLoaded">Log</a>
+        </div> -->
+        <div class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/advanced" *ngIf="configLoaded">Advanced</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet *ngIf="connected"></router-outlet>
+  <div class="row" *ngIf="!connected">
+    <div class="col pt-3">
+      <p>Disconnected. <span *ngIf="connectionAttempts > 0">Attempting to reconnect ({{connectionAttempts}})</span></p>
+    </div>
+  </div>
+</div>

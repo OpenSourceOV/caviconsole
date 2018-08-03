@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <button type="button" class="btn btn-default pull-right" (click)="bsModalRef.hide()">Close</button>
+  <button type="button" class="btn pull-right" [ngClass]="{'btn-primary': processed, 'btn-default': !processed}" (click)="processed = !processed">Processed</button>
+</div>
+<div class="modal-body">
+  <p class="lead" *ngIf="loading">Loading...</p>
+  <div 
+    *ngIf="!loading && !processed" 
+    class="preview-container" 
+    (swipeleft)="swipe($event.type)" 
+    (swiperight)="swipe($event.type)">
+    <div 
+      *ngFor="let image of images; let idx=index"
+      [class.visible]="image.visible" 
+      [class.hidden]="!image.visible">
+      <img [src]="image.src" class="mx-auto d-block img-fluid">
+      <small class="info">{{ image.original ? '(current) ' : ''}}{{image.timestamp}} </small>
+    </div>
+  </div>
+  <div 
+    *ngIf="!loading && processed" 
+    class="preview-container" 
+    (swipeleft)="swipe($event.type)" 
+    (swiperight)="swipe($event.type)">
+    <div 
+      *ngFor="let image of images; let idx=index"
+      [class.visible]="image.visible" 
+      [class.hidden]="!image.visible">
+      <img [src]="image.processedSrc" class="mx-auto d-block img-fluid">
+      <small class="info">{{ image.original ? '(current) ' : ''}}{{image.timestamp}} </small>
+    </div>
+  </div>
+  <div *ngIf="!loading" class="mt-4">
+    <form class="form-inline">
+      <label class="sr-only" for="inlineFormInputGroupUsername2">Area</label>
+      <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+        <div class="input-group-addon">Area</div>
+        <input type="text" class="form-control" name="area" [(ngModel)]="area">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="updateArea()">Update</button>
+    </form>
+  </div>
+</div>

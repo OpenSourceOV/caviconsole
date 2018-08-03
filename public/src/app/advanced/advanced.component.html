@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-md-12 col-lg-6">
+    <div class="form-group row">
+      <label class="col-xs-12 col-md-4 col-form-label">CaviCapture</label>
+      <div class="col">
+        <input type="text" class="form-control" name="scriptPath" [(ngModel)]="configService.scriptPath">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-xs-12 col-md-4 col-form-label">CaviProcess</label>
+      <div class="col">
+        <input type="text" name="processProcessor" class="form-control" [(ngModel)]="config.process.processor">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-xs-12 col-md-4 col-form-label">RPi GPIO Light Channel</label>
+      <div class="col">
+        <input type="number" name="piGPIOLightChannel" placeholder="7" class="form-control" [(ngModel)]="config.pi.GPIO_light_channel">
+      </div>
+      <div class="col-3">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary" (click)="config.pi.GPIO_light_channel = config.pi.GPIO_light_channel - 1"><i class="fa fa-minus" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-secondary" (click)="config.pi.GPIO_light_channel = config.pi.GPIO_light_channel + 1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-xs-12 col-md-4 col-form-label">Wifi Mode</label>
+      <div class="col">
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" [(ngModel)]="wifiConfig.mode" name="wifiMode" value="AP"> Access Point
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" [(ngModel)]="wifiConfig.mode" name="wifiMode" value="network"> Network
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row" *ngIf="wifiConfig.mode == 'network'">
+      <label class="col-xs-12 col-md-4 col-form-label">SSID</label>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="wifiConfig.SSID">
+      </div>
+    </div>    
+    <div class="form-group row" *ngIf="wifiConfig.mode == 'network'">
+      <label class="col-xs-12 col-md-4 col-form-label">Password</label>
+      <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="wifiConfig.password">
+      </div>
+    </div>  
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <hr />
+    <div class="float-right">
+      <button type="button" class="btn btn-secondary" (click)="updateWifi()">Update Wifi</button>      
+      <button type="button" class="btn btn-secondary" (click)="updateConfig()">Update Config</button>
+    </div>
+  </div>
+</div>
+<!-- <pre>{{wifiConfig | json}}</pre> -->

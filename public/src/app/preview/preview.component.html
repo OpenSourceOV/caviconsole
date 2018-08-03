@@ -1,0 +1,7 @@
+<div class="modal-header">
+  <button type="button" class="btn btn-default pull-right" (click)="bsModalRef.hide()">Close</button>
+</div>
+<div class="modal-body">
+  <p class="lead" *ngIf="!imagePreviewSrc">Generating preview...</p>
+  <img [src]="imagePreviewSrc" class="img-fluid" *ngIf="imagePreviewSrc" />
+</div>

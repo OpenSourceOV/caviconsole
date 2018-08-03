@@ -1,0 +1,2 @@
+#!/bin/bash
+/home/pi/streamer/mjpg-streamer/mjpg_streamer -i "/home/pi/streamer/mjpg-streamer/input_uvc.so -f 10 -r 640x320 -n -y" -o "/home/pi/streamer/mjpg-streamer/output_http.so -w /home/pi/streamer/mjpg-streamer/www -p 8181"

@@ -1,0 +1,10 @@
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 40vw;
+}
+
+.btn-cumulative {
+  position: absolute; top: 15px; left: 85px;
+  z-index: 500;
+}

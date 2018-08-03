@@ -1,0 +1,14 @@
+.log {
+  height: 300px;
+  overflow-y: scroll;
+  width: 100%;
+  div {
+    padding: 2px 15px;
+    &:nth-child(odd) {
+      background-color:#f9f9f9;
+    }
+    &.error {
+      color: #fe767a;
+    }
+  }
+}

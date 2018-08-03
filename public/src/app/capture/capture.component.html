@@ -1,0 +1,191 @@
+<form #configForm="ngForm" novalidate>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group row">
+        <label class="col-xs-12 col-md-4 col-form-label">Config File</label>
+        <div class="col">
+          <input type="text" class="form-control" name="configFile" required #configFile="ngModel" [(ngModel)]="configService.configFile">
+          <small class="form-text text-danger" *ngIf="configFile.errors?.required">
+            Config is required. If unsure use /home/pi/cavicapture/config.ini
+          </small>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">Shutterspeed</label>
+        <div class="col">
+          <input 
+            type="number" name="cameraShutterSpeed" class="form-control" placeholder="1000" required
+            [(ngModel)]="config.camera.shutter_speed" #cameraShutterSpeed="ngModel">
+          <small class="form-text text-danger" *ngIf="cameraShutterSpeed.errors?.required">
+            A shutterspeed is required
+          </small>
+        </div>
+        <div class="col-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" (click)="config.camera.shutter_speed = config.camera.shutter_speed - 100; cameraShutterSpeed.control.markAsDirty()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="config.camera.shutter_speed = config.camera.shutter_speed + 100; cameraShutterSpeed.control.markAsDirty()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">ISO</label>
+        <div class="col">
+          <input type="number" name="cameraISO" class="form-control" placeholder="100" [(ngModel)]="config.camera.ISO" #cameraISO="ngModel" required>
+          <small class="form-text text-danger" *ngIf="cameraISO.errors?.required">
+            ISO is required
+          </small>
+        </div>
+        <div class="col-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" (click)="config.camera.ISO = config.camera.ISO - 100; cameraISO.control.markAsDirty()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="config.camera.ISO = config.camera.ISO + 100; cameraISO.control.markAsDirty()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">Duration (hours)</label>
+        <div class="col">
+          <input type="number" name="captureDuration" class="form-control" placeholder="1" [(ngModel)]="config.capture.duration" #captureDuration="ngModel" required>
+          <small class="form-text text-danger" *ngIf="captureDuration.errors?.required">
+            Duration is required
+          </small>
+        </div>
+        <div class="col-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" (click)="config.capture.duration = config.capture.duration - 1; captureDuration.control.markAsDirty()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="config.capture.duration = config.capture.duration + 1; captureDuration.control.markAsDirty()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">Interval (sec)</label>
+        <div class="col">
+          <input type="number" name="captureInterval" class="form-control" placeholder="300" [(ngModel)]="config.capture.interval" #captureInterval="ngModel" required>
+          <small class="form-text text-danger" *ngIf="captureInterval.errors?.required">
+            Interval is required
+          </small>
+        </div>
+        <div class="col-3">
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary" (click)="config.capture.interval = config.capture.interval - 20; captureInterval.control.markAsDirty()"><i class="fa fa-minus" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="config.capture.interval = config.capture.interval + 20; captureInterval.control.markAsDirty()"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">Sample Type</label>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.capture.light_source" name="light_source" value="Above"> Stem
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.capture.light_source" name="light_source" value="Below"> Leaf
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">USB Stick / External</label>
+        <div class="col">
+          <select 
+            class="form-control" name="storageOption" 
+            #storageOption="ngModel" [(ngModel)]="config.capture.external_storage" 
+            (change)="updateOutputDir()" required>
+            <option value="" *ngIf="storageList?.length == 0">None available</option>
+            <option value="" *ngIf="storageList?.length > 0">Select storage option</option>
+            <option *ngFor="let option of storageList" [value]="option">{{option}}</option>
+          </select> 
+          <small class="form-text text-danger" *ngIf="storageOption.errors?.required">
+            USB stick or external storage required
+          </small>
+          <div class="row mt-1">
+            <div class="col">
+              <button class="btn btn-secondary btn-sm" type="button" (click)="ejectExternalStorage()" *ngIf="configLoaded && config.capture.external_storage">Eject <i class="fa fa-eject" aria-hidden="true"></i></button>
+              <button class="btn btn-secondary btn-sm" type="button" (click)="refresh()" *ngIf="configLoaded">Refresh List <i class="fa fa-refresh" aria-hidden="true"></i></button>          
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">Sequence Name</label>
+        <div class="col">
+          <input type="text" name="captureSequenceName" class="form-control" 
+            [(ngModel)]="config.capture.sequence_name" #captureSequenceName="ngModel" required (keyup)="updateOutputDir()">
+          <small class="form-text text-danger" *ngIf="captureSequenceName.errors?.required">
+            Sequence name is required
+          </small>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded && config.capture.external_storage && config.capture.sequence_name">
+        <label class="col-xs-12 col-md-4 col-form-label">Output Directory</label>
+        <div class="col">
+          <input type="text" name="captureOutputDir" class="form-control" [value]="config.capture.output_dir + '/' + config.capture.sequence_name" disabled="disabled">
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">Resolution</label>
+        <div class="col">
+          <select name="captureResolution" [(ngModel)]="config.capture.resolution" class="form-control" #captureResolution="ngModel" required>
+            <option value="Max">Max (2592x1944)</option>
+            <!-- <option value="Large">Large (1920x1080)</option> -->
+            <option value="Medium">Medium (1296x972)</option>
+            <option value="Small">Small (640x480)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row" *ngIf="configLoaded">
+        <label class="col-xs-12 col-md-4 col-form-label">Crop</label>
+        <div class="col">
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.capture.crop_enabled" name="crop_enabled" value="On"> Enabled
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" [(ngModel)]="config.capture.crop_enabled" name="crop_enabled" value="Off"> Disabled
+            </label>
+          </div>
+          <div class="row" *ngIf="config.capture.crop_enabled == 'On'">
+            <div class="col">
+              <button type="button" class="btn btn-secondary" (click)="showCrop()" *ngIf="configLoaded"><i class="fa fa-crop" aria-hidden="true"></i> Set</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="form-group row" *ngIf="configLoaded && config.capture.crop_enabled == 'On'">
+        <label class="col-xs-12 col-md-4 col-form-label">Crop Area</label>
+      </div> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <hr />
+      <div class="d-flex justify-content-start">
+        <div>
+          <button type="button" class="btn mb-1" [ngClass]="{'btn-primary':!configLoaded, 'btn-secondary':configLoaded}" (click)="readConfig()">Read Config</button><span *ngIf="!configLoaded"> or </span>
+          <button type="button" class="btn mb-1 btn-secondary" *ngIf="!configLoaded" (click)="readConfig()">Create New</button>
+          <button type="button" class="btn mb-1 btn-primary" (click)="updateConfig()" *ngIf="configLoaded && configForm.valid && configForm.dirty">Update Config</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="configVisible = !configVisible" *ngIf="configLoaded">{{configVisible ? 'Hide' : 'Show'}} Config</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="showLog()" *ngIf="configLoaded"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Log</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="showLive()" *ngIf="configLoaded && !capturing"><i class="fa fa-camera" aria-hidden="true"></i> Live</button>
+        </div>
+        <div class="ml-auto p-2" *ngIf="configLoaded">
+          <button type="button" class="btn btn-lg mb-1 btn-secondary" (click)="showPreview()" *ngIf="!capturing && config.capture.external_storage && !configForm.dirty && configForm.valid">Preview</button>
+          <button type="button" class="btn btn-lg mb-1 btn-primary" (click)="startCapture()" *ngIf="storageList && config.capture.external_storage && !capturing && !configForm.dirty && configForm.valid">Start</button>
+          <button type="button" class="btn btn-lg mb-1 btn-danger" (click)="stopCapture()" *ngIf="capturing">Stop</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="configVisible">
+    <div class="col">
+      <pre>{{ config | json }}</pre>
+    </div>
+  </div>
+</form>
