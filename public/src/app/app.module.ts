@@ -90,7 +90,8 @@ const appRoutes: Routes = [
     DataService,
     LogService,
     ConfigGuard,
-    AppConstants
+    AppConstants,
+    { provide: Window, useValue: window },
   ],
   bootstrap: [AppComponent]
 })
