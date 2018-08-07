@@ -102,7 +102,7 @@ Commands are entered into the terminal line by line followed by a carriage retur
 
 Commands are entered into the terminal line by line followed by a carriage return. Answer 'Y' to any questions.
 
-1. Download cavicapture, caviprocess, and caviconsole
+1. Download cavicapture (version 2), caviprocess, and caviconsole
 
     ```
     cd ~/
