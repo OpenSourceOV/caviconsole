@@ -12,9 +12,9 @@ export class ConfigService {
   
   // public configFile: string = '/home/pi/cavicapture/config.ini';
   // public configFile: string = './dummy_pi_fs/config.ini';
-  public configFile: string = '/home/pi/Desktop/config.ini';
+  public configFile: string = '/home/pi/caviconsole/default-config.ini';
   public scriptPath: string = '/home/pi/cavicapture/cavicapture.py'
-  public processorPath: string = '/home/pi/cavicapture/processor.py'
+  public processorPath: string = '/home/pi/caviprocess/caviprocess.py'
 
   public config: BehaviorSubject<Config> = new BehaviorSubject(null)
   public wifiConfig: BehaviorSubject<WifiConfig> = new BehaviorSubject(null)

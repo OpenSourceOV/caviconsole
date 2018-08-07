@@ -794,9 +794,9 @@ var ConfigService = (function () {
         this.configLoaded = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](false);
         // public configFile: string = '/home/pi/cavicapture/config.ini';
         // public configFile: string = './dummy_pi_fs/config.ini';
-        this.configFile = '/home/pi/Desktop/config.ini';
+        this.configFile = '/home/pi/caviconsole/default-config.ini';
         this.scriptPath = '/home/pi/cavicapture/cavicapture.py';
-        this.processorPath = '/home/pi/cavicapture/processor.py';
+        this.processorPath = '/home/pi/caviprocess/caviprocess.py';
         this.config = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](null);
         this.wifiConfig = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](null);
         console.log("Config service constructor");

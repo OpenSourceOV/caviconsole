@@ -26,9 +26,10 @@ export class DataComponent implements OnInit, OnDestroy {
 
   public reloadData: Subject<any> = new Subject();
   private componentDestroyed: Subject<boolean> = new Subject<boolean>();
-  private config: Config
+  public config: Config
   public imagePreviewSrc: Subject<string> = new Subject<string>();
   public queueSummary: QueueSummary;
+  public ROIActive: boolean;
   roiModalRef: BsModalRef;
   logModalRef: BsModalRef;  
   
