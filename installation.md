@@ -127,6 +127,7 @@ Commands are entered into the terminal line by line followed by a carriage retur
 4. Install mjpg streamer
 
     ```
+    cd ~/
     sudo ln -s /usr/include/linux/videodev2.h /usr/include/linux/videodev.h
     wget http://www.opensourceov.org/app/uploads/2018/08/mjpg-streamer-code-r182.zip
     unzip mjpg-streamer-code-r182.zip
