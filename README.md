@@ -1,3 +1,3 @@
 # Caviconsole
 
-[Installation instructions - new install](./instructions.md)
+[Installation instructions - new install](./installation.md)
