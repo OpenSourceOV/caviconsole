@@ -80,6 +80,7 @@ Commands are entered into the terminal line by line followed by a carriage retur
 
     ```
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+    source ~/.bashrc
     nvm install v6.9.5
     nvm alias default v6.9.5
     ```
