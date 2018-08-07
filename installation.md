@@ -88,6 +88,7 @@ Commands are entered into the terminal line by line followed by a carriage retur
 2. Install python libraries
 
     ```
+    sudo apt-get update
     sudo apt-get install python-opencv
     ```
 
