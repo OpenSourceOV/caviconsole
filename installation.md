@@ -117,7 +117,7 @@ Commands are entered into the terminal line by line followed by a carriage retur
     cd ~/
     git clone https://github.com/OpenSourceOV/cavicapture.git
     git clone https://github.com/OpenSourceOV/caviconsole.git
-    cd cavicapture && git checkout 2.0
+    cd cavicapture && git checkout cavicam-1.0
     ```
 
 2. Install the node packages for caviconsole (may take some time and might generate a bunch of ‘warning’ error messages - these can be ignored)
