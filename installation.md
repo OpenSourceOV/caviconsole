@@ -12,7 +12,7 @@ These instructions assume you are using a new and unused Pi and a blank microSD 
 
 3. Insert the USB keyboard and mouse into the USB ports on the Pi.
 
-4. Insert the HDMI video cable into the HDMI port on the Pi and a monitor/TV HDMI/DVI-D port (adapter may be required).
+4. Insert the HDMI video cable into the HDMI port on the Pi and connect to a monitor/TV HDMI/DVI-D port (adapter may be required).
 
 5. Insert the micro USB cable into the micro USB port on the Pi and into the computer micro USB port or wall socket USB power supply.
 
@@ -21,11 +21,13 @@ These instructions assume you are using a new and unused Pi and a blank microSD 
     ![](./images/noobs.png)
 
 
+Alternatively you can 'flash' the operating system to a microSD card by using a program like Etcher or Windows equivalent.
+
 ### Pi setup
 
 1. Connect the Pi to the internet.
 
-    Connecting the Pi v3 to the internet is much easier than previous models. You can connect the Pi to an internet-accessible network by plugging an ethernet cable into the ethernet port on the Pi and then directly into a network router. Alternatively the model 3 Raspberry Pi has Wi-Fi (enabled by default) and can be connected to any wireless network that broadcasts an SSID. At the top right of the desktop click the Wi-Fi icon on the task bar and you will see a list of available wireless networks. Click a network to join, providing a network key if required.
+    Connecting the Pi v3 to the internet is much easier than previous models. You can connect the Pi to an internet-accessible network by plugging an ethernet cable into the ethernet port on the Pi and then directly into a network router. The model 3 Raspberry Pi has Wi-Fi (enabled by default) and can be connected to any wireless network that broadcasts an SSID. At the top right of the desktop click the Wi-Fi icon on the task bar and you will see a list of available wireless networks. Click a network to join, providing a network key if required.
 
     ![](./images/task_bar_wifi.jpg)
     ![](./images/wireless_network_list.jpg)
@@ -76,39 +78,46 @@ These instructions assume you are using a new and unused Pi and a blank microSD 
 
 Commands are entered into the terminal line by line followed by a carriage return (enter). Answer 'Y' to any questions.
 
-1. Install node
+1. Install/upgrade node and install npm
 
     ```
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-    source ~/.bashrc
-    nvm install v6.9.5
-    nvm alias default v6.9.5
+    sudo apt-get update
+    sudo apt-get install nodejs npm -y
     ```
 
 2. Install python libraries
 
     ```
     sudo apt-get update
-    sudo apt-get install python-opencv
+    sudo apt-get install python-opencv -y
     ```
 
 3. Install streamer dependencies
 
     ```
-    sudo apt-get install libjpeg8-dev imagemagick libv4l-dev
+    sudo apt-get install libjpeg8-dev imagemagick libv4l-dev -y
+    ```
+
+4. Install networking and permissions dependencies
+
+    ```
+    sudo apt-get update
+    sudo apt-get install hostapd isc-dhcp-server -y
+    sudo apt-get install iptables-persistent -y
+    sudo apt-get install acl -y
     ```
 
 ### Install programs and scripts
 
 Commands are entered into the terminal line by line followed by a carriage return. Answer 'Y' to any questions.
 
-1. Download cavicapture (version 2), caviprocess, and caviconsole
+1. Download cavicapture and caviconsole
 
     ```
     cd ~/
-    git clone https://github.com/OpenSourceOV/cavicapture.git -b 2.0 --single-branch 
-    git clone https://github.com/OpenSourceOV/caviprocess.git --depth 1
-    git clone https://github.com/OpenSourceOV/caviconsole.git --depth 1
+    git clone https://github.com/OpenSourceOV/cavicapture.git
+    git clone https://github.com/OpenSourceOV/caviconsole.git
+    cd cavicapture && git checkout 2.0
     ```
 
 2. Install the node packages for caviconsole (may take some time and might generate a bunch of ‘warning’ error messages - these can be ignored)
@@ -136,7 +145,42 @@ Commands are entered into the terminal line by line followed by a carriage retur
     mv ~/mjpg-streamer-code-r182/mjpg-streamer ~/
     ```
 
-## Using Caviconsole
+5. Setup networking
+
+    ```
+    sudo apt-get install hostapd isc-dhcp-server iptables-persistent -y
+    ```
+
+    Answer 'Yes' if it asks to save IPv4 or IPv6 rules.
+    Don't worry if you see an error about failing to start a service.
+
+    Assign a static IP to the wireless adapter
+    
+    ```
+    sudo ifconfig wlan0 192.168.42.1
+    ```
+
+    Set hostapd config
+
+    ```
+    sudo apt-get install vim -y
+    sudo vim /etc/init.d/hostapd
+    ```
+
+    Use the down cursor key to get to a line that starts ‘DAEMON_CONF’ and press ‘i’ and move the cursor to after the ‘=’ and add ‘/etc/hostapd/hostapd.conf’. It should look like this:
+
+    ```
+    DAEMON_CONF=/etc/hostapd/hostapd.conf
+    ```
+    
+    Press ESC then :wq and press ENTER
+
+6. Reboot
+
+    Type 'reboot' in the console or go to the Raspberry icon top right and click 'Shutdown' and then select 'Reboot'.
+        
+
+## Running Caviconsole
 
 
 1. Start caviconsole
@@ -147,5 +191,4 @@ Commands are entered into the terminal line by line followed by a carriage retur
     ~/caviconsole/run.sh
     ```
 
-2. Open the browser and enter address: http://localhost:6060
-
+2. Open the web browser on the Pi and enter address: http://localhost:6060 and give it a few seconds to load the app.
