@@ -52,7 +52,7 @@ export class PointEditorComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
-  PREVIEW_RANGE = 5
+  PREVIEW_RANGE = 2
 
   public loading: boolean = true;
   private componentDestroyed: Subject<boolean> = new Subject<boolean>();
