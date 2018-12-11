@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { Location } from '@angular/common';
+import { WindowService } from './window.service';
 
 @Injectable()
 export class AppConstants {    
@@ -12,11 +12,10 @@ export class AppConstants {
     public previewURL: string
 
     constructor(
-      @Inject(Window) private _window: Window
+      private windowService: WindowService
     ) {
-      this.serverURL = `http://${this._window.location.hostname}:${this._window.location.port}`;
-      this.previewURL = `http://${this._window.location.hostname}:8181`;
-
-      // console.log("Esadasddas", this._window.location.hostname, this._window.location.port, this._window.location);
+      let location = this.windowService.nativeWindow.location
+      this.serverURL = `http://${location.hostname}:${location.port}`;
+      this.previewURL = `http://${location.hostname}:8181`;
     }
 };
