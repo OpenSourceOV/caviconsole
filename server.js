@@ -37,7 +37,6 @@ app.use(express.static(app.paths.public));
 
 // app modules
 var configModule  = require(app.paths.modules + '/config')(app, process, io);
-var storageModule = require(app.paths.modules + '/storage')(app, configModule, process, io);
 var roiModule     = require(app.paths.modules + '/roi')(app, configModule, captureModule);
 var cropModule    = require(app.paths.modules + '/crop')(app, configModule, captureModule, io);
 var processModule = require(app.paths.modules + '/process')(app, configModule, io);
@@ -67,7 +66,6 @@ io.on('connection', (socket) => {
   previewModule.initSocket(socket);
   captureModule.initSocket(socket);
   processModule.initSocket(socket);
-  storageModule.initSocket(socket);
   roiModule.initSocket(socket);
   piModule.initSocket(socket);
   cropModule.initSocket(socket);

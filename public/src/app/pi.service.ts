@@ -13,7 +13,6 @@ export class PiService {
   public reprocessing: BehaviorSubject<boolean> = new BehaviorSubject(false);
   public streamingPreview: BehaviorSubject<boolean> = new BehaviorSubject(null);
   public latestCapturedImages: BehaviorSubject<any[]> = new BehaviorSubject([]);
-  public storageList: BehaviorSubject<any[]> = new BehaviorSubject(null);
 
   constructor(
     private socketService: SocketService,
@@ -23,7 +22,6 @@ export class PiService {
     configService.configLoaded.subscribe((loaded) => {
       if(loaded === true) {
         // this.getLightStatus();
-        this.getStorageList();
         this.getCaptureStatus();
         this.getProcessingStatus();
         this.getPreviewStatus();
@@ -34,10 +32,6 @@ export class PiService {
   setupSocketEvents() {
     this.socketService.socket.on('pi:lightStatus', (status) => {
       this.light.next(status);
-    })
-    this.socketService.socket.on('storage:list', (list) => {
-      this.storageList.next(list);
-      this.checkConfigStorage();
     })
     this.socketService.socket.on('capture:started', () => {
       this.capturing.next(true);
@@ -69,31 +63,10 @@ export class PiService {
     this.socketService.socket.on('capture:latestImages', (images) => {
       this.latestCapturedImages.next(JSON.parse(images));
     })
-    this.socketService.socket.on('config:unloaded', () => {    
-      this.getStorageList();
-    });
-    this.socketService.socket.on('storage:unmounted', () => {    
-      console.log("Storage unmounted");
-      this.getStorageList();
-    });
-
-  }
-
-  checkConfigStorage() {
-    let config = this.configService.config.getValue();
-    if(!this.storageList.getValue().find(item => item == config.capture.external_storage)) {
-      config.capture.external_storage = "";
-      config.capture.output_dir = "";
-      this.configService.config.next(config);
-    }
   }
 
   unmountStorage(device: string) {
     this.socketService.socket.emit('storage:unmount', device);
-  }
-
-  getStorageList() {
-    this.socketService.socket.emit('storage:list');
   }
 
   getLightStatus() {

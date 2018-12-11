@@ -141,13 +141,5 @@ module.exports = (app, configModule, processModule, io) => {
     module.connectDB();
   });
 
-  app.eventEmitter.on('storage:unmounting', () => {
-    if(module.capturesDB) {
-      console.log("Closing db");
-      module.capturesDB.close();
-      module.capturesDB = null;
-    }
-  });
-
   return module;
 };

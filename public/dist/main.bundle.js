@@ -1,51 +1,310 @@
-webpackJsonp([2],{
+webpackJsonp(["main"],{
 
-/***/ "../../../../../src async recursive":
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = "../../../../../src async recursive";
-
-/***/ }),
-
-/***/ "../../../../../src/app/advanced/advanced.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-12 col-lg-6\">\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">CaviCapture</label>\n      <div class=\"col\">\n        <input type=\"text\" class=\"form-control\" name=\"scriptPath\" [(ngModel)]=\"configService.scriptPath\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">CaviProcess</label>\n      <div class=\"col\">\n        <input type=\"text\" name=\"processProcessor\" class=\"form-control\" [(ngModel)]=\"config.process.processor\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">RPi GPIO Light Channel</label>\n      <div class=\"col\">\n        <input type=\"number\" name=\"piGPIOLightChannel\" placeholder=\"7\" class=\"form-control\" [(ngModel)]=\"config.pi.GPIO_light_channel\">\n      </div>\n      <div class=\"col-3\">\n        <div class=\"btn-group\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.pi.GPIO_light_channel = config.pi.GPIO_light_channel - 1\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.pi.GPIO_light_channel = config.pi.GPIO_light_channel + 1\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">Wifi Mode</label>\n      <div class=\"col\">\n        <div class=\"form-check form-check-inline\">\n          <label class=\"form-check-label\">\n            <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"wifiConfig.mode\" name=\"wifiMode\" value=\"AP\"> Access Point\n          </label>\n        </div>\n        <div class=\"form-check form-check-inline\">\n          <label class=\"form-check-label\">\n            <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"wifiConfig.mode\" name=\"wifiMode\" value=\"network\"> Network\n          </label>\n        </div>\n      </div>\n    </div>\n    <div class=\"form-group row\" *ngIf=\"wifiConfig.mode == 'network'\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">SSID</label>\n      <div class=\"col\">\n        <input type=\"text\" class=\"form-control\" [(ngModel)]=\"wifiConfig.SSID\">\n      </div>\n    </div>    \n    <div class=\"form-group row\" *ngIf=\"wifiConfig.mode == 'network'\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">Password</label>\n      <div class=\"col\">\n        <input type=\"text\" class=\"form-control\" [(ngModel)]=\"wifiConfig.password\">\n      </div>\n    </div>  \n  </div>\n</div>\n<div class=\"row\">\n  <div class=\"col\">\n    <hr />\n    <div class=\"float-right\">\n      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"updateWifi()\">Update Wifi</button>      \n      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"updateConfig()\">Update Config</button>\n    </div>\n  </div>\n</div>\n<!-- <pre>{{wifiConfig | json}}</pre> -->"
-
-/***/ }),
-
-/***/ "../../../../../src/app/advanced/advanced.component.scss":
+/***/ "./node_modules/moment/locale recursive ^\\.\\/.*$":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "../../../../../src/app/advanced/advanced.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/$$_gendir lazy recursive":
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = "./src/$$_gendir lazy recursive";
+
+/***/ }),
+
+/***/ "./src/app/advanced/advanced.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-12 col-lg-6\">\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">CaviCapture</label>\n      <div class=\"col\">\n        <input type=\"text\" class=\"form-control\" name=\"scriptPath\" [(ngModel)]=\"configService.scriptPath\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">CaviProcess</label>\n      <div class=\"col\">\n        <input type=\"text\" name=\"processProcessor\" class=\"form-control\" [(ngModel)]=\"config.process.processor\">\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">RPi GPIO Light Channel</label>\n      <div class=\"col\">\n        <input type=\"number\" name=\"piGPIOLightChannel\" placeholder=\"7\" class=\"form-control\" [(ngModel)]=\"config.pi.GPIO_light_channel\">\n      </div>\n      <div class=\"col-3\">\n        <div class=\"btn-group\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.pi.GPIO_light_channel = config.pi.GPIO_light_channel - 1\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.pi.GPIO_light_channel = config.pi.GPIO_light_channel + 1\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"form-group row\">\n      <label class=\"col-xs-12 col-md-4 col-form-label\">Wifi Mode</label>\n      <div class=\"col\">\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"doWifiAP();\">Access Point</button>  \n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"doWifiNetwork()\">Network</button>  \n      </div>\n    </div>\n    <ng-container *ngIf=\"wifiConfig.mode == 'network'\">\n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">SSID</label>\n        <div class=\"col\">\n          <input type=\"text\" class=\"form-control\" [(ngModel)]=\"wifiConfig.SSID\">\n        </div>\n      </div>    \n      <div class=\"form-group row\" *ngIf=\"wifiConfig.mode == 'network'\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Password</label>\n        <div class=\"col\">\n          <input type=\"text\" class=\"form-control\" [(ngModel)]=\"wifiConfig.password\">\n        </div>\n      </div>  \n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Update</label>\n        <div class=\"col\">\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"updateWifi()\">Update Wifi</button>      \n        </div>\n      </div>\n    </ng-container>\n  </div>\n</div>\n<div class=\"row\">\n  <div class=\"col\">\n    <hr />\n    <div class=\"float-right\">\n      <button type=\"button\" class=\"btn btn-secondary\" (click)=\"updateConfig()\">Update Config</button>\n    </div>\n  </div>\n</div>\n<!-- <pre>{{wifiConfig | json}}</pre> -->"
+
+/***/ }),
+
+/***/ "./src/app/advanced/advanced.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/advanced/advanced.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdvancedComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,9 +314,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
 var AdvancedComponent = (function () {
     function AdvancedComponent(configService, piService) {
         var _this = this;
@@ -76,6 +336,15 @@ var AdvancedComponent = (function () {
             _this.capturing = capturing;
         });
     }
+    AdvancedComponent.prototype.doWifiAP = function () {
+        console.log("Doing wifi AP");
+        this.wifiConfig.mode = 'AP';
+        this.updateWifi();
+    };
+    AdvancedComponent.prototype.doWifiNetwork = function () {
+        console.log("Doing wifi network");
+        this.wifiConfig.mode = 'network';
+    };
     AdvancedComponent.prototype.updateConfig = function () {
         this.configService.updateConfig(this.config);
     };
@@ -87,55 +356,38 @@ var AdvancedComponent = (function () {
     return AdvancedComponent;
 }());
 AdvancedComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'app-advanced',
-        template: __webpack_require__("../../../../../src/app/advanced/advanced.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/advanced/advanced.component.scss")]
+        template: __webpack_require__("./src/app/advanced/advanced.component.html"),
+        styles: [__webpack_require__("./src/app/advanced/advanced.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__config_service__["a" /* ConfigService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__pi_service__["a" /* PiService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _a || Object, typeof (_b = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _b || Object])
 ], AdvancedComponent);
-
+exports.AdvancedComponent = AdvancedComponent;
 var _a, _b;
 //# sourceMappingURL=advanced.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.html":
+/***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"container-fluid\">\n  <div class=\"row\" *ngIf=\"connected\">\n    <div class=\"col mb-4 mt-3\">\n      <div class=\"btn-toolbar\">\n        <div class=\"btn-group mr-2\">\n          <button \n            type=\"button\" \n            class=\"btn btn-sm\" \n            [ngClass]=\"{'btn-secondary': !light, 'btn-primary': light}\" \n            (click)=\"piService.toggleLight()\" \n            *ngIf=\"configLoaded && !capturing\">\n            Light\n            <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i>\n          </button>\n          <button \n            type=\"button\" \n            class=\"btn btn-secondary btn-sm\" \n            (click)=\"piService.restartPi()\">\n            Restart\n            <i class=\"fa fa-undo\" aria-hidden=\"true\"></i>\n          </button> \n          <button \n            type=\"button\" \n            class=\"btn btn-secondary btn-sm\" \n            (click)=\"piService.shutdownPi()\">\n            Shutdown\n          </button>\n        </div>\n      </div> \n      <div class=\"nav nav-tabs\">\n        <div class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" routerLink=\"/capture\">Capture</a>\n        </div>\n        <div class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" routerLink=\"/process\" *ngIf=\"configLoaded\">Process</a>\n        </div>\n        <div class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" routerLink=\"/data\" *ngIf=\"configLoaded && dbConnected\">Results</a>\n        </div>\n        <!-- <div class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" routerLink=\"/log\" *ngIf=\"configLoaded\">Log</a>\n        </div> -->\n        <div class=\"nav-item\">\n          <a class=\"nav-link\" routerLinkActive=\"active\" routerLink=\"/advanced\" *ngIf=\"configLoaded\">Advanced</a>\n        </div>\n      </div>\n    </div>\n  </div>\n  <router-outlet *ngIf=\"connected\"></router-outlet>\n  <div class=\"row\" *ngIf=\"!connected\">\n    <div class=\"col pt-3\">\n      <p>Disconnected. <span *ngIf=\"connectionAttempts > 0\">Attempting to reconnect ({{connectionAttempts}})</span></p>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/app.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".btn-toolbar {\n  position: absolute;\n  right: 10px;\n  top: 0; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ".btn-toolbar {\n  position: absolute;\n  right: 10px;\n  top: 0; }\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/app.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__log_service__ = __webpack_require__("../../../../../src/app/log.service.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -145,12 +397,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var log_service_1 = __webpack_require__("./src/app/log.service.ts");
 var AppComponent = (function () {
     function AppComponent(configService, socketService, piService, dataService, logService) {
         var _this = this;
@@ -187,25 +440,24 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'app-root',
-        template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.scss")]
+        template: __webpack_require__("./src/app/app.component.html"),
+        styles: [__webpack_require__("./src/app/app.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__config_service__["a" /* ConfigService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__data_service__["a" /* DataService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__log_service__["a" /* LogService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__log_service__["a" /* LogService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _a || Object, typeof (_b = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _b || Object, typeof (_c = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _c || Object, typeof (_d = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _d || Object, typeof (_e = typeof log_service_1.LogService !== "undefined" && log_service_1.LogService) === "function" && _e || Object])
 ], AppComponent);
-
+exports.AppComponent = AppComponent;
 var _a, _b, _c, _d, _e;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.constants.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/app.constants.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppConstants; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -218,7 +470,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var AppConstants = (function () {
     function AppConstants(_window) {
         this._window = _window;
@@ -229,94 +482,66 @@ var AppConstants = (function () {
     return AppConstants;
 }());
 AppConstants = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Inject */])(Window)),
+    core_1.Injectable(),
+    __param(0, core_1.Inject(Window)),
     __metadata("design:paramtypes", [Object])
 ], AppConstants);
-
+exports.AppConstants = AppConstants;
 ;
 //# sourceMappingURL=app.constants.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/app.module.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__capture_capture_component__ = __webpack_require__("../../../../../src/app/capture/capture.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__preview_preview_component__ = __webpack_require__("../../../../../src/app/preview/preview.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__live_live_component__ = __webpack_require__("../../../../../src/app/live/live.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__data_data_component__ = __webpack_require__("../../../../../src/app/data/data.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__process_log_process_log_component__ = __webpack_require__("../../../../../src/app/process-log/process-log.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__process_queue_process_queue_component__ = __webpack_require__("../../../../../src/app/process-queue/process-queue.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__capture_log_capture_log_component__ = __webpack_require__("../../../../../src/app/capture-log/capture-log.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__advanced_advanced_component__ = __webpack_require__("../../../../../src/app/advanced/advanced.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__crop_crop_component__ = __webpack_require__("../../../../../src/app/crop/crop.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__data_roi_data_roi_component__ = __webpack_require__("../../../../../src/app/data-roi/data-roi.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__process_process_component__ = __webpack_require__("../../../../../src/app/process/process.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__config_validator_service__ = __webpack_require__("../../../../../src/app/config-validator.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__log_service__ = __webpack_require__("../../../../../src/app/log.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__data_components_data_plot_data_plot_component__ = __webpack_require__("../../../../../src/app/data/_components/data-plot/data-plot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__data_components_roi_selector_roi_selector_component__ = __webpack_require__("../../../../../src/app/data/_components/roi-selector/roi-selector.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__config_guard__ = __webpack_require__("../../../../../src/app/config.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_ngx_bootstrap__ = __webpack_require__("../../../../ngx-bootstrap/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__point_editor_point_editor_component__ = __webpack_require__("../../../../../src/app/point-editor/point-editor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__app_constants__ = __webpack_require__("../../../../../src/app/app.constants.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-browser/@angular/platform-browser.es5.js");
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+var common_1 = __webpack_require__("./node_modules/@angular/common/@angular/common.es5.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+var app_component_1 = __webpack_require__("./src/app/app.component.ts");
+var capture_component_1 = __webpack_require__("./src/app/capture/capture.component.ts");
+var preview_component_1 = __webpack_require__("./src/app/preview/preview.component.ts");
+var live_component_1 = __webpack_require__("./src/app/live/live.component.ts");
+var data_component_1 = __webpack_require__("./src/app/data/data.component.ts");
+var process_log_component_1 = __webpack_require__("./src/app/process-log/process-log.component.ts");
+var process_queue_component_1 = __webpack_require__("./src/app/process-queue/process-queue.component.ts");
+var capture_log_component_1 = __webpack_require__("./src/app/capture-log/capture-log.component.ts");
+var advanced_component_1 = __webpack_require__("./src/app/advanced/advanced.component.ts");
+var crop_component_1 = __webpack_require__("./src/app/crop/crop.component.ts");
+var data_roi_component_1 = __webpack_require__("./src/app/data-roi/data-roi.component.ts");
+var process_component_1 = __webpack_require__("./src/app/process/process.component.ts");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var config_validator_service_1 = __webpack_require__("./src/app/config-validator.service.ts");
+var log_service_1 = __webpack_require__("./src/app/log.service.ts");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var data_plot_component_1 = __webpack_require__("./src/app/data/_components/data-plot/data-plot.component.ts");
+var roi_selector_component_1 = __webpack_require__("./src/app/data/_components/roi-selector/roi-selector.component.ts");
+var config_guard_1 = __webpack_require__("./src/app/config.guard.ts");
+var ngx_bootstrap_1 = __webpack_require__("./node_modules/ngx-bootstrap/index.js");
+var point_editor_component_1 = __webpack_require__("./src/app/point-editor/point-editor.component.ts");
+var app_constants_1 = __webpack_require__("./src/app/app.constants.ts");
 var appRoutes = [
     { path: '',
         redirectTo: '/capture',
         pathMatch: 'full'
     },
-    { path: 'capture', component: __WEBPACK_IMPORTED_MODULE_6__capture_capture_component__["a" /* CaptureComponent */] },
-    { path: 'process', component: __WEBPACK_IMPORTED_MODULE_16__process_process_component__["a" /* ProcessComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_25__config_guard__["a" /* ConfigGuard */]] },
-    { path: 'data', component: __WEBPACK_IMPORTED_MODULE_9__data_data_component__["a" /* DataComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_25__config_guard__["a" /* ConfigGuard */]] },
-    { path: 'advanced', component: __WEBPACK_IMPORTED_MODULE_13__advanced_advanced_component__["a" /* AdvancedComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_25__config_guard__["a" /* ConfigGuard */]] },
+    { path: 'capture', component: capture_component_1.CaptureComponent },
+    { path: 'process', component: process_component_1.ProcessComponent, canActivate: [config_guard_1.ConfigGuard] },
+    { path: 'data', component: data_component_1.DataComponent, canActivate: [config_guard_1.ConfigGuard] },
+    { path: 'advanced', component: advanced_component_1.AdvancedComponent, canActivate: [config_guard_1.ConfigGuard] },
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -324,98 +549,80 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+    core_1.NgModule({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__capture_capture_component__["a" /* CaptureComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__preview_preview_component__["a" /* PreviewComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__live_live_component__["a" /* LiveComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__data_data_component__["a" /* DataComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__process_log_process_log_component__["a" /* ProcessLogComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__process_queue_process_queue_component__["a" /* ProcessQueueComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__capture_log_capture_log_component__["a" /* CaptureLogComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__advanced_advanced_component__["a" /* AdvancedComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__process_process_component__["a" /* ProcessComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__crop_crop_component__["a" /* CropComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__data_roi_data_roi_component__["a" /* DataRoiComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__data_components_data_plot_data_plot_component__["a" /* DataPlotComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__data_components_roi_selector_roi_selector_component__["a" /* RoiSelectorComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__point_editor_point_editor_component__["a" /* PointEditorComponent */]
+            app_component_1.AppComponent,
+            capture_component_1.CaptureComponent,
+            preview_component_1.PreviewComponent,
+            live_component_1.LiveComponent,
+            data_component_1.DataComponent,
+            process_log_component_1.ProcessLogComponent,
+            process_queue_component_1.ProcessQueueComponent,
+            capture_log_component_1.CaptureLogComponent,
+            advanced_component_1.AdvancedComponent,
+            process_component_1.ProcessComponent,
+            crop_component_1.CropComponent,
+            data_roi_component_1.DataRoiComponent,
+            data_plot_component_1.DataPlotComponent,
+            roi_selector_component_1.RoiSelectorComponent,
+            point_editor_component_1.PointEditorComponent
         ],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_14__crop_crop_component__["a" /* CropComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__preview_preview_component__["a" /* PreviewComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__live_live_component__["a" /* LiveComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__process_log_process_log_component__["a" /* ProcessLogComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__process_queue_process_queue_component__["a" /* ProcessQueueComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__capture_log_capture_log_component__["a" /* CaptureLogComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__data_roi_data_roi_component__["a" /* DataRoiComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__point_editor_point_editor_component__["a" /* PointEditorComponent */]
+            crop_component_1.CropComponent,
+            preview_component_1.PreviewComponent,
+            live_component_1.LiveComponent,
+            process_log_component_1.ProcessLogComponent,
+            process_queue_component_1.ProcessQueueComponent,
+            capture_log_component_1.CaptureLogComponent,
+            data_roi_component_1.DataRoiComponent,
+            point_editor_component_1.PointEditorComponent
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_common__["a" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_26_ngx_bootstrap__["a" /* ModalModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_26_ngx_bootstrap__["b" /* ProgressbarModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(appRoutes)
+            platform_browser_1.BrowserModule,
+            common_1.CommonModule,
+            forms_1.FormsModule,
+            ngx_bootstrap_1.ModalModule.forRoot(),
+            ngx_bootstrap_1.ProgressbarModule.forRoot(),
+            router_1.RouterModule.forRoot(appRoutes)
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_17__config_service__["a" /* ConfigService */],
-            __WEBPACK_IMPORTED_MODULE_18__config_validator_service__["a" /* ConfigValidatorService */],
-            __WEBPACK_IMPORTED_MODULE_21__pi_service__["a" /* PiService */],
-            __WEBPACK_IMPORTED_MODULE_20__socket_service__["a" /* SocketService */],
-            __WEBPACK_IMPORTED_MODULE_22__data_service__["a" /* DataService */],
-            __WEBPACK_IMPORTED_MODULE_19__log_service__["a" /* LogService */],
-            __WEBPACK_IMPORTED_MODULE_25__config_guard__["a" /* ConfigGuard */],
-            __WEBPACK_IMPORTED_MODULE_28__app_constants__["a" /* AppConstants */],
+            config_service_1.ConfigService,
+            config_validator_service_1.ConfigValidatorService,
+            pi_service_1.PiService,
+            socket_service_1.SocketService,
+            data_service_1.DataService,
+            log_service_1.LogService,
+            config_guard_1.ConfigGuard,
+            app_constants_1.AppConstants,
             { provide: Window, useValue: window },
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+        bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
-
+exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/capture-log/capture-log.component.html":
+/***/ "./src/app/capture-log/capture-log.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"btn btn-default pull-right\" (click)=\"bsModalRef.hide()\">Close</button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"log\" #logElement>\n    <div *ngIf=\"log.length == 0\">Log is empty</div>\n    <div *ngFor=\"let entry of log\" [ngClass]=\"entry.type\">{{entry.value}}</div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/capture-log/capture-log.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/capture-log/capture-log.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".log {\n  height: 300px;\n  overflow-y: scroll;\n  width: 100%; }\n  .log div {\n    padding: 2px 15px; }\n    .log div:nth-child(odd) {\n      background-color: #f9f9f9; }\n    .log div.error {\n      color: #fe767a; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ".log {\n  height: 300px;\n  overflow-y: scroll;\n  width: 100%; }\n  .log div {\n    padding: 2px 15px; }\n  .log div:nth-child(odd) {\n      background-color: #f9f9f9; }\n  .log div.error {\n      color: #fe767a; }\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/capture-log/capture-log.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/capture-log/capture-log.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__log_service__ = __webpack_require__("../../../../../src/app/log.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CaptureLogComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -425,16 +632,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var log_service_1 = __webpack_require__("./src/app/log.service.ts");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
 var CaptureLogComponent = (function () {
     function CaptureLogComponent(logService, bsModalRef) {
         this.logService = logService;
         this.bsModalRef = bsModalRef;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
         this.log = [];
     }
     CaptureLogComponent.prototype.ngOnInit = function () {
@@ -453,67 +661,42 @@ var CaptureLogComponent = (function () {
     return CaptureLogComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('logElement'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object)
+    core_1.ViewChild('logElement'),
+    __metadata("design:type", typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object)
 ], CaptureLogComponent.prototype, "logElement", void 0);
 CaptureLogComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/capture-log/capture-log.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/capture-log/capture-log.component.scss")]
+        template: __webpack_require__("./src/app/capture-log/capture-log.component.html"),
+        styles: [__webpack_require__("./src/app/capture-log/capture-log.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__log_service__["a" /* LogService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__log_service__["a" /* LogService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof log_service_1.LogService !== "undefined" && log_service_1.LogService) === "function" && _b || Object, typeof (_c = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _c || Object])
 ], CaptureLogComponent);
-
+exports.CaptureLogComponent = CaptureLogComponent;
 var _a, _b, _c;
 //# sourceMappingURL=capture-log.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/capture/capture.component.html":
+/***/ "./src/app/capture/capture.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form #configForm=\"ngForm\" novalidate>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Config File</label>\n        <div class=\"col\">\n          <input type=\"text\" class=\"form-control\" name=\"configFile\" required #configFile=\"ngModel\" [(ngModel)]=\"configService.configFile\">\n          <small class=\"form-text text-danger\" *ngIf=\"configFile.errors?.required\">\n            Config is required. If unsure use /home/pi/cavicapture/config.ini\n          </small>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Shutterspeed</label>\n        <div class=\"col\">\n          <input \n            type=\"number\" name=\"cameraShutterSpeed\" class=\"form-control\" placeholder=\"1000\" required\n            [(ngModel)]=\"config.camera.shutter_speed\" #cameraShutterSpeed=\"ngModel\">\n          <small class=\"form-text text-danger\" *ngIf=\"cameraShutterSpeed.errors?.required\">\n            A shutterspeed is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.shutter_speed = config.camera.shutter_speed - 100; cameraShutterSpeed.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.shutter_speed = config.camera.shutter_speed + 100; cameraShutterSpeed.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">ISO</label>\n        <div class=\"col\">\n          <input type=\"number\" name=\"cameraISO\" class=\"form-control\" placeholder=\"100\" [(ngModel)]=\"config.camera.ISO\" #cameraISO=\"ngModel\" required>\n          <small class=\"form-text text-danger\" *ngIf=\"cameraISO.errors?.required\">\n            ISO is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.ISO = config.camera.ISO - 100; cameraISO.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.ISO = config.camera.ISO + 100; cameraISO.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Duration (hours)</label>\n        <div class=\"col\">\n          <input type=\"number\" name=\"captureDuration\" class=\"form-control\" placeholder=\"1\" [(ngModel)]=\"config.capture.duration\" #captureDuration=\"ngModel\" required>\n          <small class=\"form-text text-danger\" *ngIf=\"captureDuration.errors?.required\">\n            Duration is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.duration = config.capture.duration - 1; captureDuration.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.duration = config.capture.duration + 1; captureDuration.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Interval (sec)</label>\n        <div class=\"col\">\n          <input type=\"number\" name=\"captureInterval\" class=\"form-control\" placeholder=\"300\" [(ngModel)]=\"config.capture.interval\" #captureInterval=\"ngModel\" required>\n          <small class=\"form-text text-danger\" *ngIf=\"captureInterval.errors?.required\">\n            Interval is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.interval = config.capture.interval - 20; captureInterval.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.interval = config.capture.interval + 20; captureInterval.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Sample Type</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.light_source\" name=\"light_source\" value=\"Above\"> Stem\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.light_source\" name=\"light_source\" value=\"Below\"> Leaf\n            </label>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-6\">\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">USB Stick / External</label>\n        <div class=\"col\">\n          <select \n            class=\"form-control\" name=\"storageOption\" \n            #storageOption=\"ngModel\" [(ngModel)]=\"config.capture.external_storage\" \n            (change)=\"updateOutputDir()\" required>\n            <option value=\"\" *ngIf=\"storageList?.length == 0\">None available</option>\n            <option value=\"\" *ngIf=\"storageList?.length > 0\">Select storage option</option>\n            <option *ngFor=\"let option of storageList\" [value]=\"option\">{{option}}</option>\n          </select> \n          <small class=\"form-text text-danger\" *ngIf=\"storageOption.errors?.required\">\n            USB stick or external storage required\n          </small>\n          <div class=\"row mt-1\">\n            <div class=\"col\">\n              <button class=\"btn btn-secondary btn-sm\" type=\"button\" (click)=\"ejectExternalStorage()\" *ngIf=\"configLoaded && config.capture.external_storage\">Eject <i class=\"fa fa-eject\" aria-hidden=\"true\"></i></button>\n              <button class=\"btn btn-secondary btn-sm\" type=\"button\" (click)=\"refresh()\" *ngIf=\"configLoaded\">Refresh List <i class=\"fa fa-refresh\" aria-hidden=\"true\"></i></button>          \n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Sequence Name</label>\n        <div class=\"col\">\n          <input type=\"text\" name=\"captureSequenceName\" class=\"form-control\" \n            [(ngModel)]=\"config.capture.sequence_name\" #captureSequenceName=\"ngModel\" required (keyup)=\"updateOutputDir()\">\n          <small class=\"form-text text-danger\" *ngIf=\"captureSequenceName.errors?.required\">\n            Sequence name is required\n          </small>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded && config.capture.external_storage && config.capture.sequence_name\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Output Directory</label>\n        <div class=\"col\">\n          <input type=\"text\" name=\"captureOutputDir\" class=\"form-control\" [value]=\"config.capture.output_dir + '/' + config.capture.sequence_name\" disabled=\"disabled\">\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Resolution</label>\n        <div class=\"col\">\n          <select name=\"captureResolution\" [(ngModel)]=\"config.capture.resolution\" class=\"form-control\" #captureResolution=\"ngModel\" required>\n            <option value=\"Max\">Max (2592x1944)</option>\n            <!-- <option value=\"Large\">Large (1920x1080)</option> -->\n            <option value=\"Medium\">Medium (1296x972)</option>\n            <option value=\"Small\">Small (640x480)</option>\n          </select>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Crop</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.crop_enabled\" name=\"crop_enabled\" value=\"On\"> Enabled\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.crop_enabled\" name=\"crop_enabled\" value=\"Off\"> Disabled\n            </label>\n          </div>\n          <div class=\"row\" *ngIf=\"config.capture.crop_enabled == 'On'\">\n            <div class=\"col\">\n              <button type=\"button\" class=\"btn btn-secondary\" (click)=\"showCrop()\" *ngIf=\"configLoaded\"><i class=\"fa fa-crop\" aria-hidden=\"true\"></i> Set</button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <!-- <div class=\"form-group row\" *ngIf=\"configLoaded && config.capture.crop_enabled == 'On'\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Crop Area</label>\n      </div> -->\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col\">\n      <hr />\n      <div class=\"d-flex justify-content-start\">\n        <div>\n          <button type=\"button\" class=\"btn mb-1\" [ngClass]=\"{'btn-primary':!configLoaded, 'btn-secondary':configLoaded}\" (click)=\"readConfig()\">Read Config</button><span *ngIf=\"!configLoaded\"> or </span>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" *ngIf=\"!configLoaded\" (click)=\"readConfig()\">Create New</button>\n          <button type=\"button\" class=\"btn mb-1 btn-primary\" (click)=\"updateConfig()\" *ngIf=\"configLoaded && configForm.valid && configForm.dirty\">Update Config</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"configVisible = !configVisible\" *ngIf=\"configLoaded\">{{configVisible ? 'Hide' : 'Show'}} Config</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"showLog()\" *ngIf=\"configLoaded\"><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> View Log</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"showLive()\" *ngIf=\"configLoaded && !capturing\"><i class=\"fa fa-camera\" aria-hidden=\"true\"></i> Live</button>\n        </div>\n        <div class=\"ml-auto p-2\" *ngIf=\"configLoaded\">\n          <button type=\"button\" class=\"btn btn-lg mb-1 btn-secondary\" (click)=\"showPreview()\" *ngIf=\"!capturing && config.capture.external_storage && !configForm.dirty && configForm.valid\">Preview</button>\n          <button type=\"button\" class=\"btn btn-lg mb-1 btn-primary\" (click)=\"startCapture()\" *ngIf=\"storageList && config.capture.external_storage && !capturing && !configForm.dirty && configForm.valid\">Start</button>\n          <button type=\"button\" class=\"btn btn-lg mb-1 btn-danger\" (click)=\"stopCapture()\" *ngIf=\"capturing\">Stop</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\" *ngIf=\"configVisible\">\n    <div class=\"col\">\n      <pre>{{ config | json }}</pre>\n    </div>\n  </div>\n</form>"
+module.exports = "<form #configForm=\"ngForm\" novalidate>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Config File</label>\n        <div class=\"col\">\n          <input type=\"text\" class=\"form-control\" name=\"configFile\" required #configFile=\"ngModel\" [(ngModel)]=\"configService.configFile\">\n          <small class=\"form-text text-danger\" *ngIf=\"configFile.errors?.required\">\n            Config is required. If unsure use /home/pi/cavicapture/config.ini\n          </small>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Shutterspeed</label>\n        <div class=\"col\">\n          <input \n            type=\"number\" name=\"cameraShutterSpeed\" class=\"form-control\" placeholder=\"1000\" required\n            [(ngModel)]=\"config.camera.shutter_speed\" #cameraShutterSpeed=\"ngModel\">\n          <small class=\"form-text text-danger\" *ngIf=\"cameraShutterSpeed.errors?.required\">\n            A shutterspeed is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.shutter_speed = config.camera.shutter_speed - 100; cameraShutterSpeed.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.shutter_speed = config.camera.shutter_speed + 100; cameraShutterSpeed.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">ISO</label>\n        <div class=\"col\">\n          <input type=\"number\" name=\"cameraISO\" class=\"form-control\" placeholder=\"100\" [(ngModel)]=\"config.camera.ISO\" #cameraISO=\"ngModel\" required>\n          <small class=\"form-text text-danger\" *ngIf=\"cameraISO.errors?.required\">\n            ISO is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.ISO = config.camera.ISO - 100; cameraISO.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.camera.ISO = config.camera.ISO + 100; cameraISO.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Duration (hours)</label>\n        <div class=\"col\">\n          <input type=\"number\" name=\"captureDuration\" class=\"form-control\" placeholder=\"1\" [(ngModel)]=\"config.capture.duration\" #captureDuration=\"ngModel\" required>\n          <small class=\"form-text text-danger\" *ngIf=\"captureDuration.errors?.required\">\n            Duration is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.duration = config.capture.duration - 1; captureDuration.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.duration = config.capture.duration + 1; captureDuration.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Interval (sec)</label>\n        <div class=\"col\">\n          <input type=\"number\" name=\"captureInterval\" class=\"form-control\" placeholder=\"300\" [(ngModel)]=\"config.capture.interval\" #captureInterval=\"ngModel\" required>\n          <small class=\"form-text text-danger\" *ngIf=\"captureInterval.errors?.required\">\n            Interval is required\n          </small>\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.interval = config.capture.interval - 20; captureInterval.control.markAsDirty()\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.capture.interval = config.capture.interval + 20; captureInterval.control.markAsDirty()\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Sample Type</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.light_source\" name=\"light_source\" value=\"Above\"> Stem\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.light_source\" name=\"light_source\" value=\"Below\"> Leaf\n            </label>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-md-6\">\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Sequence Name</label>\n        <div class=\"col\">\n          <input type=\"text\" name=\"captureSequenceName\" class=\"form-control\" \n            [(ngModel)]=\"config.capture.sequence_name\" #captureSequenceName=\"ngModel\" required>\n          <small class=\"form-text text-danger\" *ngIf=\"captureSequenceName.errors?.required\">\n            Sequence name is required\n          </small>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Output Directory</label>\n        <div class=\"col\">\n          <input type=\"text\" name=\"captureOutputDir\" class=\"form-control\" [(ngModel)]=\"config.capture.output_dir\" required>\n          <small class=\"form-text\" *ngIf=\"config.capture.output_dir\">\n            Files saved to: {{config.capture.output_dir + '/' + config.capture.sequence_name}}\n          </small>          \n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Resolution</label>\n        <div class=\"col\">\n          <select name=\"captureResolution\" [(ngModel)]=\"config.capture.resolution\" class=\"form-control\" #captureResolution=\"ngModel\" required>\n            <option value=\"Max\">Max (2592x1944)</option>\n            <!-- <option value=\"Large\">Large (1920x1080)</option> -->\n            <option value=\"Medium\">Medium (1296x972)</option>\n            <option value=\"Small\">Small (640x480)</option>\n          </select>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"configLoaded\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Crop</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.crop_enabled\" name=\"crop_enabled\" value=\"On\"> Enabled\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.capture.crop_enabled\" name=\"crop_enabled\" value=\"Off\"> Disabled\n            </label>\n          </div>\n          <div class=\"row\" *ngIf=\"config.capture.crop_enabled == 'On'\">\n            <div class=\"col\">\n              <button type=\"button\" class=\"btn btn-secondary\" (click)=\"showCrop()\" *ngIf=\"configLoaded\"><i class=\"fa fa-crop\" aria-hidden=\"true\"></i> Set</button>\n            </div>\n          </div>\n        </div>\n      </div>\n      <!-- <div class=\"form-group row\" *ngIf=\"configLoaded && config.capture.crop_enabled == 'On'\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Crop Area</label>\n      </div> -->\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col\">\n      <hr />\n      <div class=\"d-flex justify-content-start\">\n        <div>\n          <button type=\"button\" class=\"btn mb-1\" [ngClass]=\"{'btn-primary':!configLoaded, 'btn-secondary':configLoaded}\" (click)=\"readConfig()\">Read Config</button>\n          <button type=\"button\" class=\"btn mb-1 btn-primary\" (click)=\"updateConfig()\" *ngIf=\"configLoaded && configForm.valid && configForm.dirty\">Update Config</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"configVisible = !configVisible\" *ngIf=\"configLoaded\">{{configVisible ? 'Hide' : 'Show'}} Config</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"showLog()\" *ngIf=\"configLoaded\"><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> View Log</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"showLive()\" *ngIf=\"configLoaded && !capturing\"><i class=\"fa fa-camera\" aria-hidden=\"true\"></i> Live</button>\n        </div>\n        <div class=\"ml-auto p-2\" *ngIf=\"configLoaded\">\n          <button type=\"button\" class=\"btn btn-lg mb-1 btn-secondary\" (click)=\"showPreview()\" *ngIf=\"!capturing && !configForm.dirty && configForm.valid\">Preview</button>\n          <button type=\"button\" class=\"btn btn-lg mb-1 btn-primary\" (click)=\"startCapture()\" *ngIf=\"!capturing && !configForm.dirty && configForm.valid\">Start</button>\n          <button type=\"button\" class=\"btn btn-lg mb-1 btn-danger\" (click)=\"stopCapture()\" *ngIf=\"capturing\">Stop</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\" *ngIf=\"configVisible\">\n    <div class=\"col\">\n      <pre>{{ config | json }}</pre>\n    </div>\n  </div>\n</form>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/capture/capture.component.scss":
+/***/ "./src/app/capture/capture.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/capture/capture.component.ts":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/capture/capture.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_validator_service__ = __webpack_require__("../../../../../src/app/config-validator.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__live_live_component__ = __webpack_require__("../../../../../src/app/live/live.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__preview_preview_component__ = __webpack_require__("../../../../../src/app/preview/preview.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__crop_crop_component__ = __webpack_require__("../../../../../src/app/crop/crop.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__capture_log_capture_log_component__ = __webpack_require__("../../../../../src/app/capture-log/capture-log.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CaptureComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -523,18 +706,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var config_validator_service_1 = __webpack_require__("./src/app/config-validator.service.ts");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+var live_component_1 = __webpack_require__("./src/app/live/live.component.ts");
+var preview_component_1 = __webpack_require__("./src/app/preview/preview.component.ts");
+var crop_component_1 = __webpack_require__("./src/app/crop/crop.component.ts");
+var capture_log_component_1 = __webpack_require__("./src/app/capture-log/capture-log.component.ts");
+var modal_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/index.js");
 var CaptureComponent = (function () {
     function CaptureComponent(configService, piService, modalService, configValidatorService) {
         this.configService = configService;
@@ -545,9 +729,8 @@ var CaptureComponent = (function () {
         this.capturing = false;
         this.configVisible = false;
         this.configValid = false;
-        this.storageList = [];
         this.outputPath = '';
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
     }
     CaptureComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -572,9 +755,6 @@ var CaptureComponent = (function () {
         });
         this.piService.capturing.takeUntil(this.componentDestroyed.asObservable()).subscribe(function (capturing) {
             _this.capturing = capturing;
-        });
-        this.piService.storageList.takeUntil(this.componentDestroyed.asObservable()).subscribe(function (storageList) {
-            _this.storageList = storageList;
         });
         this.configForm.valueChanges.takeUntil(this.componentDestroyed.asObservable()).subscribe(function (change) {
             console.log("Change!", change);
@@ -618,51 +798,43 @@ var CaptureComponent = (function () {
         console.log("Starting capture");
         this.piService.startCapture();
     };
-    CaptureComponent.prototype.refresh = function () {
-        this.piService.getStorageList();
-    };
     CaptureComponent.prototype.showLive = function () {
-        this.liveModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_7__live_live_component__["a" /* LiveComponent */], { class: 'modal-lg' });
+        this.liveModalRef = this.modalService.show(live_component_1.LiveComponent, { class: 'modal-lg' });
     };
     CaptureComponent.prototype.showPreview = function () {
-        this.previewModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_8__preview_preview_component__["a" /* PreviewComponent */], { class: 'modal-lg' });
+        this.previewModalRef = this.modalService.show(preview_component_1.PreviewComponent, { class: 'modal-lg' });
     };
     CaptureComponent.prototype.showLog = function () {
-        this.logModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_10__capture_log_capture_log_component__["a" /* CaptureLogComponent */], { class: 'modal-lg' });
+        this.logModalRef = this.modalService.show(capture_log_component_1.CaptureLogComponent, { class: 'modal-lg' });
     };
     CaptureComponent.prototype.showCrop = function () {
-        this.cropModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_9__crop_crop_component__["a" /* CropComponent */], { class: 'modal-lg' });
+        this.cropModalRef = this.modalService.show(crop_component_1.CropComponent, { class: 'modal-lg' });
     };
     return CaptureComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('configForm'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* NgForm */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* NgForm */]) === "function" && _a || Object)
+    core_1.ViewChild('configForm'),
+    __metadata("design:type", typeof (_a = typeof forms_1.NgForm !== "undefined" && forms_1.NgForm) === "function" && _a || Object)
 ], CaptureComponent.prototype, "configForm", void 0);
 CaptureComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'app-capture',
-        template: __webpack_require__("../../../../../src/app/capture/capture.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/capture/capture.component.scss")]
+        template: __webpack_require__("./src/app/capture/capture.component.html"),
+        styles: [__webpack_require__("./src/app/capture/capture.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_modal__["b" /* BsModalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_modal__["b" /* BsModalService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__config_validator_service__["a" /* ConfigValidatorService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__config_validator_service__["a" /* ConfigValidatorService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _b || Object, typeof (_c = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _c || Object, typeof (_d = typeof modal_1.BsModalService !== "undefined" && modal_1.BsModalService) === "function" && _d || Object, typeof (_e = typeof config_validator_service_1.ConfigValidatorService !== "undefined" && config_validator_service_1.ConfigValidatorService) === "function" && _e || Object])
 ], CaptureComponent);
-
+exports.CaptureComponent = CaptureComponent;
 var _a, _b, _c, _d, _e;
 //# sourceMappingURL=capture.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/config-validator.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/config-validator.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigValidatorService; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -672,20 +844,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var BehaviorSubject_1 = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
 var ConfigValidatorService = (function () {
     function ConfigValidatorService(configService, piService) {
         var _this = this;
         this.configService = configService;
         this.piService = piService;
-        this.configValid = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](false);
+        this.configValid = new BehaviorSubject_1.BehaviorSubject(false);
         configService.configLoaded.subscribe(function () {
-            _this.validateConfig();
-        });
-        piService.storageList.subscribe(function () {
             _this.validateConfig();
         });
     }
@@ -694,46 +864,29 @@ var ConfigValidatorService = (function () {
         if (this.configService.configLoaded.getValue() !== true) {
             valid = false;
         }
-        var storageList = this.piService.storageList.getValue();
         var config = this.configService.config.getValue();
-        if (!storageList) {
-            valid = false;
-        }
-        else if (storageList.length === 0) {
-            valid = false;
-        }
-        else if (config.capture.external_storage.length === 0) {
-            valid = false;
-        }
-        else {
-            if (!storageList.find(function (item) { return item == config.capture.external_storage; })) {
-                valid = false;
-            }
-        }
         if (this.configValid.getValue() !== valid) {
             this.configValid.next(valid);
         }
+        true;
     };
     return ConfigValidatorService;
 }());
 ConfigValidatorService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */]) === "function" && _b || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _a || Object, typeof (_b = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _b || Object])
 ], ConfigValidatorService);
-
+exports.ConfigValidatorService = ConfigValidatorService;
 var _a, _b;
 //# sourceMappingURL=config-validator.service.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/config.guard.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/config.guard.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigGuard; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -743,9 +896,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 var ConfigGuard = (function () {
     function ConfigGuard(configService, router) {
         this.configService = configService;
@@ -763,24 +917,20 @@ var ConfigGuard = (function () {
     return ConfigGuard;
 }());
 ConfigGuard = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__config_service__["a" /* ConfigService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
 ], ConfigGuard);
-
+exports.ConfigGuard = ConfigGuard;
 var _a, _b;
 //# sourceMappingURL=config.guard.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/config.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/config.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfigService; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -790,20 +940,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var BehaviorSubject_1 = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
 var ConfigService = (function () {
     function ConfigService(socketService) {
         this.socketService = socketService;
-        this.configLoaded = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](false);
+        this.configLoaded = new BehaviorSubject_1.BehaviorSubject(false);
         // public configFile: string = '/home/pi/cavicapture/config.ini';
         // public configFile: string = './dummy_pi_fs/config.ini';
         this.configFile = '/home/pi/caviconsole/default-config.ini';
         this.scriptPath = '/home/pi/cavicapture/cavicapture.py';
         this.processorPath = '/home/pi/caviprocess/caviprocess.py';
-        this.config = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](null);
-        this.wifiConfig = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["BehaviorSubject"](null);
+        this.config = new BehaviorSubject_1.BehaviorSubject(null);
+        this.wifiConfig = new BehaviorSubject_1.BehaviorSubject(null);
         console.log("Config service constructor");
         this.setupSocketEvents();
     }
@@ -878,57 +1029,34 @@ var ConfigService = (function () {
     return ConfigService;
 }());
 ConfigService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */]) === "function" && _a || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _a || Object])
 ], ConfigService);
-
+exports.ConfigService = ConfigService;
 var _a;
 //# sourceMappingURL=config.service.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/crop/crop.component.html":
+/***/ "./src/app/crop/crop.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button *ngIf=\"newROI\" type=\"button\" class=\"btn btn-primary\" (click)=\"saveCrop()\">Save</button>\n  <button type=\"button\" class=\"btn btn-default pull-right\" (click)=\"bsModalRef.hide()\">Close</button>\n</div>\n<div class=\"modal-body\">\n  <p class=\"lead\" *ngIf=\"!imagePreviewSrc\">Generating preview...</p>\n  <roi-selector\n    *ngIf=\"imagePreviewSrc\" \n    (roiChange)=\"roiChanged($event)\" \n    [imagePreviewSrc]=\"imagePreviewSrc\"\n    [roi]=\"roi\"></roi-selector>\n  <div class=\"clearfix\"></div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/crop/crop.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/crop/crop.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/crop/crop.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/crop/crop.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__("../../../../moment/moment.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_constants__ = __webpack_require__("../../../../../src/app/app.constants.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CropComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -938,15 +1066,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+var moment = __webpack_require__("./node_modules/moment/moment.js");
+var app_constants_1 = __webpack_require__("./src/app/app.constants.ts");
 var CropComponent = (function () {
     function CropComponent(piService, socketService, configService, bsModalRef, appConstants) {
         this.piService = piService;
@@ -955,7 +1084,7 @@ var CropComponent = (function () {
         this.bsModalRef = bsModalRef;
         this.appConstants = appConstants;
         this.newROI = false;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
     }
     CropComponent.prototype.roiChanged = function (roi) {
         this.roi = roi;
@@ -976,7 +1105,7 @@ var CropComponent = (function () {
     CropComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.socketService.socket.on('crop:previewGenerated', function () {
-            _this.imagePreviewSrc = _this.appConstants.serverURL + "/capture/preview?" + __WEBPACK_IMPORTED_MODULE_7_moment__().format('MMDDYYYYHHmmss');
+            _this.imagePreviewSrc = _this.appConstants.serverURL + "/capture/preview?" + moment().format('MMDDYYYYHHmmss');
         });
         this.configService.config.takeUntil(this.componentDestroyed.asObservable()).subscribe(function (config) {
             if (!config)
@@ -1003,59 +1132,38 @@ var CropComponent = (function () {
     return CropComponent;
 }());
 CropComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/crop/crop.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/crop/crop.component.scss")]
+        template: __webpack_require__("./src/app/crop/crop.component.html"),
+        styles: [__webpack_require__("./src/app/crop/crop.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__config_service__["a" /* ConfigService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__app_constants__["a" /* AppConstants */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__app_constants__["a" /* AppConstants */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _a || Object, typeof (_b = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _b || Object, typeof (_c = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _c || Object, typeof (_d = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _d || Object, typeof (_e = typeof app_constants_1.AppConstants !== "undefined" && app_constants_1.AppConstants) === "function" && _e || Object])
 ], CropComponent);
-
+exports.CropComponent = CropComponent;
 var _a, _b, _c, _d, _e;
 //# sourceMappingURL=crop.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/data-roi/data-roi.component.html":
+/***/ "./src/app/data-roi/data-roi.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button *ngIf=\"newROI\" type=\"button\" class=\"btn btn-primary\" (click)=\"saveROI()\">Save</button>\n  <button type=\"button\" class=\"btn btn-default pull-right\" (click)=\"bsModalRef.hide()\">Close</button>\n</div>\n<div class=\"modal-body\">\n  <p class=\"lead\" *ngIf=\"!imagePreviewSrc\">Loading...</p>\n  <div class=\"roiContainer\">\n    <roi-selector\n      *ngIf=\"imagePreviewSrc\" \n      (roiChange)=\"roiChanged($event)\" \n      [imagePreviewSrc]=\"imagePreviewSrc\"\n      [roi]=\"roi\"></roi-selector>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/data-roi/data-roi.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/data-roi/data-roi.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/data-roi/data-roi.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/data-roi/data-roi.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_constants__ = __webpack_require__("../../../../../src/app/app.constants.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_takeUntil__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataRoiComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1065,14 +1173,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var app_constants_1 = __webpack_require__("./src/app/app.constants.ts");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
 var DataRoiComponent = (function () {
     function DataRoiComponent(piService, appConstants, configService, dataService, bsModalRef) {
         this.piService = piService;
@@ -1081,7 +1190,7 @@ var DataRoiComponent = (function () {
         this.dataService = dataService;
         this.bsModalRef = bsModalRef;
         this.newROI = false;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_6_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
     }
     DataRoiComponent.prototype.roiChanged = function (roi) {
         this.roi = roi;
@@ -1134,32 +1243,24 @@ var DataRoiComponent = (function () {
     return DataRoiComponent;
 }());
 DataRoiComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/data-roi/data-roi.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/data-roi/data-roi.component.scss")]
+        template: __webpack_require__("./src/app/data-roi/data-roi.component.html"),
+        styles: [__webpack_require__("./src/app/data-roi/data-roi.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__app_constants__["a" /* AppConstants */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__app_constants__["a" /* AppConstants */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__config_service__["a" /* ConfigService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__data_service__["a" /* DataService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _a || Object, typeof (_b = typeof app_constants_1.AppConstants !== "undefined" && app_constants_1.AppConstants) === "function" && _b || Object, typeof (_c = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _c || Object, typeof (_d = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _d || Object, typeof (_e = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _e || Object])
 ], DataRoiComponent);
-
+exports.DataRoiComponent = DataRoiComponent;
 var _a, _b, _c, _d, _e;
 //# sourceMappingURL=data-roi.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/data.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/data.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__("../../../../moment/moment.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1169,12 +1270,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var BehaviorSubject_1 = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+var moment = __webpack_require__("./node_modules/moment/moment.js");
 var DataService = (function () {
     function DataService(socketService, configService, piService) {
         var _this = this;
@@ -1187,10 +1289,10 @@ var DataService = (function () {
         this.data = [];
         this.skipPointUpdates = false;
         this.reprocessing = false;
-        this.queueSummary = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["BehaviorSubject"](null);
-        this.dataPoints = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
-        this.newDataPoints = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
-        this.dbConnected = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["BehaviorSubject"](false);
+        this.queueSummary = new BehaviorSubject_1.BehaviorSubject(null);
+        this.dataPoints = new BehaviorSubject_1.BehaviorSubject([]);
+        this.newDataPoints = new BehaviorSubject_1.BehaviorSubject([]);
+        this.dbConnected = new BehaviorSubject_1.BehaviorSubject(false);
         this.gettingLatestData = false;
         this.setupSocketEvents();
         configService.configLoaded.subscribe(function (loaded) {
@@ -1328,9 +1430,9 @@ var DataService = (function () {
         }
         console.log("Cumulative total", this._cumulativeTotal);
         var point = {
-            t: __WEBPACK_IMPORTED_MODULE_5_moment__(dataItem.timestamp, "YYYYMMDD-HHmmss").valueOf(),
-            label: __WEBPACK_IMPORTED_MODULE_5_moment__(dataItem.timestamp, "YYYYMMDD-HHmmss"),
-            x: __WEBPACK_IMPORTED_MODULE_5_moment__(dataItem.timestamp, "YYYYMMDD-HHmmss").format('MM/DD/YYYY HH:mm:ss'),
+            t: moment(dataItem.timestamp, "YYYYMMDD-HHmmss").valueOf(),
+            label: moment(dataItem.timestamp, "YYYYMMDD-HHmmss"),
+            x: moment(dataItem.timestamp, "YYYYMMDD-HHmmss").format('MM/DD/YYYY HH:mm:ss'),
             y: this.isCumulative ? this._cumulativeTotal : dataItem.area
         };
         return point;
@@ -1338,52 +1440,27 @@ var DataService = (function () {
     return DataService;
 }());
 DataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */]) === "function" && _c || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _a || Object, typeof (_b = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _b || Object, typeof (_c = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _c || Object])
 ], DataService);
-
+exports.DataService = DataService;
 var _a, _b, _c;
 //# sourceMappingURL=data.service.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/data/_components/data-plot/data-plot.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/data/_components/data-plot/data-plot.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".chart-container {\n  position: relative;\n  width: 100%;\n  height: 40vw; }\n\n.btn-cumulative {\n  position: absolute;\n  top: 15px;\n  left: 85px;\n  z-index: 500; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ".chart-container {\n  position: relative;\n  width: 100%;\n  height: 40vw; }\n\n.btn-cumulative {\n  position: absolute;\n  top: 15px;\n  left: 85px;\n  z-index: 500; }\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/data/_components/data-plot/data-plot.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/data/_components/data-plot/data-plot.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_chart_js__ = __webpack_require__("../../../../chart.js/src/chart.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_chart_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeWhile__ = __webpack_require__("../../../../rxjs/add/operator/takeWhile.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeWhile___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeWhile__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_filter__ = __webpack_require__("../../../../rxjs/add/operator/filter.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__point_editor_point_editor_component__ = __webpack_require__("../../../../../src/app/point-editor/point-editor.component.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataPlotComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1393,21 +1470,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var chart_js_1 = __webpack_require__("./node_modules/chart.js/src/chart.js");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeWhile.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/filter.js");
+var modal_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/index.js");
+var point_editor_component_1 = __webpack_require__("./src/app/point-editor/point-editor.component.ts");
 var DataPlotComponent = (function () {
     function DataPlotComponent(dataService, modalService) {
         this.dataService = dataService;
         this.modalService = modalService;
         this.cumulativeTotal = 0;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
         this.isCumulative = false;
         this.chartDataSet = {
             datasets: [{
@@ -1492,17 +1570,17 @@ var DataPlotComponent = (function () {
         }
     };
     DataPlotComponent.prototype.editDataItemAtIndex = function (index) {
-        this.pointEditorModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_8__point_editor_point_editor_component__["a" /* PointEditorComponent */], { class: 'modal-lg', ignoreBackdropClick: true });
+        this.pointEditorModalRef = this.modalService.show(point_editor_component_1.PointEditorComponent, { class: 'modal-lg', ignoreBackdropClick: true });
         this.pointEditorModalRef.content.dataItemIndex = index;
     };
     DataPlotComponent.prototype.initChart = function (dataPoints) {
-        __WEBPACK_IMPORTED_MODULE_1_chart_js___default.a.defaults.global.legend = false;
+        chart_js_1.default.defaults.global.legend = false;
         // Chart.defaults.bar.barPercentage = 0.1
         // Chart.defaults.bar.categoryPercentage = 0.1
-        __WEBPACK_IMPORTED_MODULE_1_chart_js___default.a.defaults.bar.maxBarThickness = 0.1;
+        chart_js_1.default.defaults.bar.maxBarThickness = 0.1;
         // Chart.defaults.bar.barThickness = 0.2
         this.chartDataSet.datasets[0].data = dataPoints;
-        this.chart = new __WEBPACK_IMPORTED_MODULE_1_chart_js___default.a('dataPlot', {
+        this.chart = new chart_js_1.default('dataPlot', {
             type: 'bar',
             data: this.chartDataSet,
             options: {
@@ -1532,42 +1610,32 @@ var DataPlotComponent = (function () {
     return DataPlotComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('dataPlot'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object)
+    core_1.ViewChild('dataPlot'),
+    __metadata("design:type", typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object)
 ], DataPlotComponent.prototype, "dataPlot", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"]) === "function" && _b || Object)
+    core_1.Input(),
+    __metadata("design:type", typeof (_b = typeof Subject_1.Subject !== "undefined" && Subject_1.Subject) === "function" && _b || Object)
 ], DataPlotComponent.prototype, "reloadData", void 0);
 DataPlotComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'data-plot',
         template: "\n    <div class=\"chart-container\">\n      <canvas #dataPlot id=\"dataPlot\" (click)=\"clickChart($event)\" (touchstart)=\"touchChart($event)\"></canvas>\n      <button type=\"button\" class=\"btn btn-sm btn-cumulative\" [ngClass]=\"{'btn-primary': dataService.isCumulative, 'btn-secondary': !dataService.isCumulative}\" (click)=\"toggleCumulative()\">Cumulative</button>\n    </div>\n  ",
-        styles: [__webpack_require__("../../../../../src/app/data/_components/data-plot/data-plot.component.scss")]
+        styles: [__webpack_require__("./src/app/data/_components/data-plot/data-plot.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_modal__["b" /* BsModalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_modal__["b" /* BsModalService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _c || Object, typeof (_d = typeof modal_1.BsModalService !== "undefined" && modal_1.BsModalService) === "function" && _d || Object])
 ], DataPlotComponent);
-
+exports.DataPlotComponent = DataPlotComponent;
 var _a, _b, _c, _d;
 //# sourceMappingURL=data-plot.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/data/_components/roi-selector/roi-selector.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/data/_components/roi-selector/roi-selector.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_roi__ = __webpack_require__("../../../../../src/app/models/roi.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_roi___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__models_roi__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoiSelectorComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1577,19 +1645,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+var roi_1 = __webpack_require__("./src/app/models/roi.ts");
 var RoiSelectorComponent = (function () {
     function RoiSelectorComponent(dataService, piService, socketService) {
         this.dataService = dataService;
         this.piService = piService;
         this.socketService = socketService;
-        this.roiChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]();
+        this.roiChange = new core_1.EventEmitter();
         this.marq = {
             top: 0,
             left: 0,
@@ -1601,7 +1670,7 @@ var RoiSelectorComponent = (function () {
             leftRelImageWidth: 0
         };
         this.cursorType = "crosshair";
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
         this.mouseDown = false;
         this.touching = false;
         this.touchDisabled = false;
@@ -1751,77 +1820,54 @@ var RoiSelectorComponent = (function () {
     return RoiSelectorComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('container'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object)
+    core_1.ViewChild('container'),
+    __metadata("design:type", typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object)
 ], RoiSelectorComponent.prototype, "container", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Output */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* EventEmitter */]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], RoiSelectorComponent.prototype, "roiChange", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__models_roi__["ROI"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__models_roi__["ROI"]) === "function" && _c || Object)
+    core_1.Input(),
+    __metadata("design:type", typeof (_c = typeof roi_1.ROI !== "undefined" && roi_1.ROI) === "function" && _c || Object)
 ], RoiSelectorComponent.prototype, "roi", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Input */])(),
+    core_1.Input(),
     __metadata("design:type", String)
 ], RoiSelectorComponent.prototype, "imagePreviewSrc", void 0);
 RoiSelectorComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'roi-selector',
         template: "\n    <div #container class=\"roi-container clearfix\"\n      [style.cursor]=\"cursorType\"\n      (mousemove)=\"doMouseMove($event)\"\n      (mousedown)=\"doMouseDown($event)\"\n      (touchstart)=\"doTouchStart($event)\"\n      (mouseup)=\"doMouseUp($event)\"\n      (window:resize)=\"onResize($event)\">\n      <img \n        (load)=\"doImageLoaded($event)\" \n        [src]=\"imagePreviewSrc\" \n        class=\"img-fluid\" \n        *ngIf=\"imagePreviewSrc\" />\n      <div \n        #marquee \n        [style.top]=\"marq.top + 'px'\" \n        [style.left]=\"marq.left + 'px'\"\n        [style.width]=\"marq.width + 'px'\"\n        [style.height]=\"marq.height + 'px'\"\n        class=\"marquee\"></div>\n    </div>\n  ",
         styles: ["\n    img {\n      -webkit-user-drag: none;\n    }\n    .btn { \n      position: absolute; top: -46px; right: 0px;\n      z-index: 100;\n    }\n    .roi-container {\n      position: relative;\n      float: left;\n    }\n    .marquee {\n      position: absolute;\n      border: 2px solid lime;\n      z-index: 98;\n    }\n  "]
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__pi_service__["a" /* PiService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__socket_service__["a" /* SocketService */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [typeof (_d = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _d || Object, typeof (_e = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _e || Object, typeof (_f = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _f || Object])
 ], RoiSelectorComponent);
-
+exports.RoiSelectorComponent = RoiSelectorComponent;
 var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=roi-selector.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/data/data.component.html":
+/***/ "./src/app/data/data.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\">\n  <div class=\"col\">\n    <data-plot [reloadData]=\"reloadData\"></data-plot>\n  </div>\n</div>\n<div class=\"row mt-1\" *ngIf=\"queueSummary\">\n  <div class=\"col\">\n    <hr />\n    <progressbar [max]=\"queueSummary.total\" [value]=\"queueSummary.processed\">\n      <span style=\"color:white; white-space:nowrap;\"></span>\n    </progressbar>\n    <small>Processed {{queueSummary.processed}} / {{queueSummary.total}}</small>\n  </div>\n</div>    \n<div class=\"row\">\n  <div class=\"col\">\n    <hr />\n    <form>\n      <div class=\"form-row align-items-center\">\n        <div class=\"col-auto\"><button type=\"button\" class=\"btn btn-primary\" [ngClass]=\"{'btn-primary': ROIActive, 'btn-secondary': !ROIActive}\" (click)=\"showROI()\"><i class=\"fa fa-crop\" aria-hidden=\"true\"></i> Set ROI</button></div>\n        <div class=\"col-auto\"><button type=\"button\" class=\"btn btn-secondary\" (click)=\"reload()\" *ngIf=\"!ROIActive\">Reload Data</button></div>\n        <label class=\"col-auto col-form-label\" *ngIf=\"config.process.filtering_enabled == 'On'\">Filter Threshold</label>\n        <div class=\"col-auto\" *ngIf=\"config.process.filtering_enabled == 'On'\"><input type=\"number\" name=\"filterThreshold\" placeholder=\"7\" class=\"form-control\" [(ngModel)]=\"config.process.filter_threshold\"></div>\n        <div class=\"col-auto\" *ngIf=\"config.process.filtering_enabled == 'On'\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.process.filter_threshold = config.process.filter_threshold - 1\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.process.filter_threshold = config.process.filter_threshold + 1\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n        <div class=\"col-auto\"><button type=\"button\" class=\"btn btn-secondary\" (click)=\"reprocess()\"><i class=\"fa fa-repeat\" aria-hidden=\"true\"></i> Reprocess</button></div>\n        <div class=\"col-auto\"><button type=\"button\" class=\"btn btn-secondary\" (click)=\"showLog()\"><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> View Log</button></div>\n      </div>\n    </form>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/data/data.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/data/data.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/data/data.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/data/data.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_roi_data_roi_component__ = __webpack_require__("../../../../../src/app/data-roi/data-roi.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__process_log_process_log_component__ = __webpack_require__("../../../../../src/app/process-log/process-log.component.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1831,16 +1877,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var data_roi_component_1 = __webpack_require__("./src/app/data-roi/data-roi.component.ts");
+var modal_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/index.js");
+var process_log_component_1 = __webpack_require__("./src/app/process-log/process-log.component.ts");
 var DataComponent = (function () {
     function DataComponent(configService, dataService, piService, socketService, modalService) {
         this.configService = configService;
@@ -1848,9 +1895,9 @@ var DataComponent = (function () {
         this.piService = piService;
         this.socketService = socketService;
         this.modalService = modalService;
-        this.reloadData = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["Subject"]();
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["Subject"]();
-        this.imagePreviewSrc = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["Subject"]();
+        this.reloadData = new Subject_1.Subject();
+        this.componentDestroyed = new Subject_1.Subject();
+        this.imagePreviewSrc = new Subject_1.Subject();
     }
     DataComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1881,65 +1928,46 @@ var DataComponent = (function () {
         this.reloadData.next(true);
     };
     DataComponent.prototype.showLog = function () {
-        this.logModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_9__process_log_process_log_component__["a" /* ProcessLogComponent */], { class: 'modal-lg' });
+        this.logModalRef = this.modalService.show(process_log_component_1.ProcessLogComponent, { class: 'modal-lg' });
     };
     DataComponent.prototype.showROI = function () {
-        this.roiModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_7__data_roi_data_roi_component__["a" /* DataRoiComponent */], { class: 'modal-lg' });
+        this.roiModalRef = this.modalService.show(data_roi_component_1.DataRoiComponent, { class: 'modal-lg' });
     };
     return DataComponent;
 }());
 DataComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'app-data',
-        template: __webpack_require__("../../../../../src/app/data/data.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/data/data.component.scss")]
+        template: __webpack_require__("./src/app/data/data.component.html"),
+        styles: [__webpack_require__("./src/app/data/data.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__config_service__["a" /* ConfigService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__data_service__["a" /* DataService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__pi_service__["a" /* PiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__socket_service__["a" /* SocketService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_modal__["b" /* BsModalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_modal__["b" /* BsModalService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _a || Object, typeof (_b = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _b || Object, typeof (_c = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _c || Object, typeof (_d = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _d || Object, typeof (_e = typeof modal_1.BsModalService !== "undefined" && modal_1.BsModalService) === "function" && _e || Object])
 ], DataComponent);
-
+exports.DataComponent = DataComponent;
 var _a, _b, _c, _d, _e;
 //# sourceMappingURL=data.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/live/live.component.html":
+/***/ "./src/app/live/live.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"btn\" [ngClass]=\"{'btn-primary':!streaming, 'btn-danger':streaming}\" (click)=\"toggleStreaming()\">{{streaming ? 'Stop' : 'Start Streaming'}}</button>\n  <div>\n    <button type=\"button\" class=\"btn\" [ngClass]=\"{'btn-secondary': !light, 'btn-primary': light}\" (click)=\"piService.toggleLight()\">Light <i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i></button>  \n    <button type=\"button\" class=\"btn btn-secondary\" (click)=\"bsModalRef.hide()\">Close</button>\n  </div>\n</div>\n<div class=\"modal-body\">\n  <div id=\"cameraPreview\">\n    <img *ngIf=\"streaming\" [src]=\"streamingURL\" class=\"rounded mx-auto d-block stream img-fluid\" />\n  </div>  \n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/live/live.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/live/live.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "#cameraPreview {\n  width: 640px;\n  height: 480px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = "#cameraPreview {\n  width: 640px;\n  height: 480px; }\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/live/live.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/live/live.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_constants__ = __webpack_require__("../../../../../src/app/app.constants.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LiveComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1949,12 +1977,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var app_constants_1 = __webpack_require__("./src/app/app.constants.ts");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
 var LiveComponent = (function () {
     function LiveComponent(piService, bsModalRef, appConstants) {
         var _this = this;
@@ -1963,7 +1992,7 @@ var LiveComponent = (function () {
         this.appConstants = appConstants;
         this.streaming = false;
         this.light = false;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
         this.streamingURL = this.appConstants.previewURL + "/?action=stream";
         this.piService.streamingPreview.takeUntil(this.componentDestroyed.asObservable()).subscribe(function (streaming) {
             _this.streaming = streaming;
@@ -1984,30 +2013,24 @@ var LiveComponent = (function () {
     return LiveComponent;
 }());
 LiveComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/live/live.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/live/live.component.scss")]
+        template: __webpack_require__("./src/app/live/live.component.html"),
+        styles: [__webpack_require__("./src/app/live/live.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__app_constants__["a" /* AppConstants */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__app_constants__["a" /* AppConstants */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _a || Object, typeof (_b = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _b || Object, typeof (_c = typeof app_constants_1.AppConstants !== "undefined" && app_constants_1.AppConstants) === "function" && _c || Object])
 ], LiveComponent);
-
+exports.LiveComponent = LiveComponent;
 var _a, _b, _c;
 //# sourceMappingURL=live.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/log.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/log.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogService; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2017,19 +2040,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var BehaviorSubject_1 = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
 var LogService = (function () {
     function LogService(socketService, configService, piService) {
         this.socketService = socketService;
         this.configService = configService;
         this.piService = piService;
-        this.captureLog = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
+        this.captureLog = new BehaviorSubject_1.BehaviorSubject([]);
         this._captureLog = [];
-        this.processLog = new __WEBPACK_IMPORTED_MODULE_4_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
+        this.processLog = new BehaviorSubject_1.BehaviorSubject([]);
         this._processLog = [];
         this.setupSocketEvents();
     }
@@ -2065,32 +2089,30 @@ var LogService = (function () {
     return LogService;
 }());
 LogService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__pi_service__["a" /* PiService */]) === "function" && _c || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _a || Object, typeof (_b = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _b || Object, typeof (_c = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _c || Object])
 ], LogService);
-
+exports.LogService = LogService;
 var _a, _b, _c;
 //# sourceMappingURL=log.service.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/models/roi.ts":
-/***/ (function(module, exports) {
+/***/ "./src/app/models/roi.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
 //# sourceMappingURL=roi.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/pi.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/pi.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PiService; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2100,27 +2122,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var BehaviorSubject_1 = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
 var PiService = (function () {
     function PiService(socketService, configService) {
         var _this = this;
         this.socketService = socketService;
         this.configService = configService;
-        this.light = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"](false);
-        this.capturing = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"](null);
-        this.processing = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"](null);
-        this.reprocessing = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"](false);
-        this.streamingPreview = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"](null);
-        this.latestCapturedImages = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
-        this.storageList = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"](null);
+        this.light = new BehaviorSubject_1.BehaviorSubject(false);
+        this.capturing = new BehaviorSubject_1.BehaviorSubject(null);
+        this.processing = new BehaviorSubject_1.BehaviorSubject(null);
+        this.reprocessing = new BehaviorSubject_1.BehaviorSubject(false);
+        this.streamingPreview = new BehaviorSubject_1.BehaviorSubject(null);
+        this.latestCapturedImages = new BehaviorSubject_1.BehaviorSubject([]);
         this.setupSocketEvents();
         configService.configLoaded.subscribe(function (loaded) {
             if (loaded === true) {
                 // this.getLightStatus();
-                _this.getStorageList();
                 _this.getCaptureStatus();
                 _this.getProcessingStatus();
                 _this.getPreviewStatus();
@@ -2131,10 +2152,6 @@ var PiService = (function () {
         var _this = this;
         this.socketService.socket.on('pi:lightStatus', function (status) {
             _this.light.next(status);
-        });
-        this.socketService.socket.on('storage:list', function (list) {
-            _this.storageList.next(list);
-            _this.checkConfigStorage();
         });
         this.socketService.socket.on('capture:started', function () {
             _this.capturing.next(true);
@@ -2166,27 +2183,9 @@ var PiService = (function () {
         this.socketService.socket.on('capture:latestImages', function (images) {
             _this.latestCapturedImages.next(JSON.parse(images));
         });
-        this.socketService.socket.on('config:unloaded', function () {
-            _this.getStorageList();
-        });
-        this.socketService.socket.on('storage:unmounted', function () {
-            console.log("Storage unmounted");
-            _this.getStorageList();
-        });
-    };
-    PiService.prototype.checkConfigStorage = function () {
-        var config = this.configService.config.getValue();
-        if (!this.storageList.getValue().find(function (item) { return item == config.capture.external_storage; })) {
-            config.capture.external_storage = "";
-            config.capture.output_dir = "";
-            this.configService.config.next(config);
-        }
     };
     PiService.prototype.unmountStorage = function (device) {
         this.socketService.socket.emit('storage:unmount', device);
-    };
-    PiService.prototype.getStorageList = function () {
-        this.socketService.socket.emit('storage:list');
     };
     PiService.prototype.getLightStatus = function () {
         this.socketService.socket.emit('pi:readLightStatus');
@@ -2290,57 +2289,34 @@ var PiService = (function () {
     return PiService;
 }());
 PiService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__socket_service__["a" /* SocketService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_service__["a" /* ConfigService */]) === "function" && _b || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _a || Object, typeof (_b = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _b || Object])
 ], PiService);
-
+exports.PiService = PiService;
 var _a, _b;
 //# sourceMappingURL=pi.service.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/point-editor/point-editor.component.html":
+/***/ "./src/app/point-editor/point-editor.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"btn btn-default pull-right\" (click)=\"bsModalRef.hide()\">Close</button>\n  <button type=\"button\" class=\"btn pull-right\" [ngClass]=\"{'btn-primary': processed, 'btn-default': !processed}\" (click)=\"processed = !processed\">Processed</button>\n</div>\n<div class=\"modal-body\">\n  <p class=\"lead\" *ngIf=\"loading\">Loading...</p>\n  <div \n    *ngIf=\"!loading && !processed\" \n    class=\"preview-container\" \n    (swipeleft)=\"swipe($event.type)\" \n    (swiperight)=\"swipe($event.type)\">\n    <div \n      *ngFor=\"let image of images; let idx=index\"\n      [class.visible]=\"image.visible\" \n      [class.hidden]=\"!image.visible\">\n      <img [src]=\"image.src\" class=\"mx-auto d-block img-fluid\">\n      <small class=\"info\">{{ image.original ? '(current) ' : ''}}{{image.timestamp}} </small>\n    </div>\n  </div>\n  <div \n    *ngIf=\"!loading && processed\" \n    class=\"preview-container\" \n    (swipeleft)=\"swipe($event.type)\" \n    (swiperight)=\"swipe($event.type)\">\n    <div \n      *ngFor=\"let image of images; let idx=index\"\n      [class.visible]=\"image.visible\" \n      [class.hidden]=\"!image.visible\">\n      <img [src]=\"image.processedSrc\" class=\"mx-auto d-block img-fluid\">\n      <small class=\"info\">{{ image.original ? '(current) ' : ''}}{{image.timestamp}} </small>\n    </div>\n  </div>\n  <div *ngIf=\"!loading\" class=\"mt-4\">\n    <form class=\"form-inline\">\n      <label class=\"sr-only\" for=\"inlineFormInputGroupUsername2\">Area</label>\n      <div class=\"input-group mb-2 mr-sm-2 mb-sm-0\">\n        <div class=\"input-group-addon\">Area</div>\n        <input type=\"text\" class=\"form-control\" name=\"area\" [(ngModel)]=\"area\">\n      </div>\n      <button type=\"submit\" class=\"btn btn-primary\" (click)=\"updateArea()\">Update</button>\n    </form>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/point-editor/point-editor.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/point-editor/point-editor.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".preview-container {\n  position: relative;\n  background-color: #000000; }\n  .preview-container img {\n    -webkit-user-drag: none; }\n\n.info {\n  position: absolute;\n  top: 2px;\n  right: 4px;\n  color: #ffffff;\n  padding: 2px; }\n\n.visible {\n  display: block; }\n\n.hidden {\n  display: none; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ".preview-container {\n  position: relative;\n  background-color: #000000; }\n  .preview-container img {\n    -webkit-user-drag: none; }\n  .info {\n  position: absolute;\n  top: 2px;\n  right: 4px;\n  color: #ffffff;\n  padding: 2px; }\n  .visible {\n  display: block; }\n  .hidden {\n  display: none; }\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/point-editor/point-editor.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/point-editor/point-editor.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment__ = __webpack_require__("../../../../moment/moment.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_constants__ = __webpack_require__("../../../../../src/app/app.constants.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PointEditorComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2350,15 +2326,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var moment = __webpack_require__("./node_modules/moment/moment.js");
+var app_constants_1 = __webpack_require__("./src/app/app.constants.ts");
 var PointEditorComponent = (function () {
     function PointEditorComponent(dataService, bsModalRef, socketService, configService, appConstants) {
         this.dataService = dataService;
@@ -2369,7 +2346,7 @@ var PointEditorComponent = (function () {
         this.SWIPE_ACTION = { LEFT: 'swipeleft', RIGHT: 'swiperight' };
         this.PREVIEW_RANGE = 5;
         this.loading = true;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
         this.processed = false;
         this.images = [];
     }
@@ -2415,7 +2392,7 @@ var PointEditorComponent = (function () {
                 image: new Image(),
                 processedImage: new Image(),
                 dataItem: this.dataService.data[i],
-                timestamp: __WEBPACK_IMPORTED_MODULE_7_moment__(this.dataService.data[i].timestamp, "YYYYMMDD-HHmmss").format('MM/DD/YYYY HH:mm:ss'),
+                timestamp: moment(this.dataService.data[i].timestamp, "YYYYMMDD-HHmmss").format('MM/DD/YYYY HH:mm:ss'),
                 original: this.dataService.data[i].id == this.dataItem.id,
                 visible: this.dataService.data[i].id == this.dataItem.id,
                 src: this.appConstants.serverURL + "/captured-image/" + this.dataService.data[i].filename,
@@ -2464,70 +2441,48 @@ var PointEditorComponent = (function () {
     return PointEditorComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('canvas'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object)
+    core_1.ViewChild('canvas'),
+    __metadata("design:type", typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object)
 ], PointEditorComponent.prototype, "canvas", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* HostListener */])('window:keydown', ['$event']),
+    core_1.HostListener('window:keydown', ['$event']),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], PointEditorComponent.prototype, "onKeyDown", null);
 PointEditorComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/point-editor/point-editor.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/point-editor/point-editor.component.scss")]
+        template: __webpack_require__("./src/app/point-editor/point-editor.component.html"),
+        styles: [__webpack_require__("./src/app/point-editor/point-editor.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__data_service__["a" /* DataService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__socket_service__["a" /* SocketService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__config_service__["a" /* ConfigService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_8__app_constants__["a" /* AppConstants */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__app_constants__["a" /* AppConstants */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _b || Object, typeof (_c = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _c || Object, typeof (_d = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _d || Object, typeof (_e = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _e || Object, typeof (_f = typeof app_constants_1.AppConstants !== "undefined" && app_constants_1.AppConstants) === "function" && _f || Object])
 ], PointEditorComponent);
-
+exports.PointEditorComponent = PointEditorComponent;
 var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=point-editor.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/preview/preview.component.html":
+/***/ "./src/app/preview/preview.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"btn btn-default pull-right\" (click)=\"bsModalRef.hide()\">Close</button>\n</div>\n<div class=\"modal-body\">\n  <p class=\"lead\" *ngIf=\"!imagePreviewSrc\">Generating preview...</p>\n  <img [src]=\"imagePreviewSrc\" class=\"img-fluid\" *ngIf=\"imagePreviewSrc\" />\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/preview/preview.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/preview/preview.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/preview/preview.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/preview/preview.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__socket_service__ = __webpack_require__("../../../../../src/app/socket.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment__ = __webpack_require__("../../../../moment/moment.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_constants__ = __webpack_require__("../../../../../src/app/app.constants.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PreviewComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2537,27 +2492,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var socket_service_1 = __webpack_require__("./src/app/socket.service.ts");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+var moment = __webpack_require__("./node_modules/moment/moment.js");
+var app_constants_1 = __webpack_require__("./src/app/app.constants.ts");
 var PreviewComponent = (function () {
     function PreviewComponent(piService, socketService, bsModalRef, appConstants) {
         this.piService = piService;
         this.socketService = socketService;
         this.bsModalRef = bsModalRef;
         this.appConstants = appConstants;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
     }
     PreviewComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.socketService.socket.on('crop:previewGenerated', function () {
             console.log("Preview generated");
-            _this.imagePreviewSrc = _this.appConstants.serverURL + "/capture/preview?" + __WEBPACK_IMPORTED_MODULE_6_moment__().format('MMDDYYYYHHmmss');
+            _this.imagePreviewSrc = _this.appConstants.serverURL + "/capture/preview?" + moment().format('MMDDYYYYHHmmss');
         });
         this.piService.generatePreview();
     };
@@ -2568,56 +2524,38 @@ var PreviewComponent = (function () {
     return PreviewComponent;
 }());
 PreviewComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/preview/preview.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/preview/preview.component.scss")]
+        template: __webpack_require__("./src/app/preview/preview.component.html"),
+        styles: [__webpack_require__("./src/app/preview/preview.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__pi_service__["a" /* PiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__socket_service__["a" /* SocketService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__app_constants__["a" /* AppConstants */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__app_constants__["a" /* AppConstants */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _a || Object, typeof (_b = typeof socket_service_1.SocketService !== "undefined" && socket_service_1.SocketService) === "function" && _b || Object, typeof (_c = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _c || Object, typeof (_d = typeof app_constants_1.AppConstants !== "undefined" && app_constants_1.AppConstants) === "function" && _d || Object])
 ], PreviewComponent);
-
+exports.PreviewComponent = PreviewComponent;
 var _a, _b, _c, _d;
 //# sourceMappingURL=preview.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/process-log/process-log.component.html":
+/***/ "./src/app/process-log/process-log.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"btn btn-default pull-right\" (click)=\"bsModalRef.hide()\">Close</button>\n</div>\n<div class=\"modal-body\">\n  <div class=\"log\" #logElement>\n    <div *ngIf=\"log.length == 0\">Log is empty</div>\n    <div *ngFor=\"let entry of log\" [ngClass]=\"entry.type\">{{entry.value}}</div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/process-log/process-log.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/process-log/process-log.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".log {\n  height: 300px;\n  overflow-y: scroll;\n  width: 100%; }\n  .log div {\n    padding: 2px 15px; }\n    .log div:nth-child(odd) {\n      background-color: #f9f9f9; }\n    .log div.error {\n      color: #fe767a; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ".log {\n  height: 300px;\n  overflow-y: scroll;\n  width: 100%; }\n  .log div {\n    padding: 2px 15px; }\n  .log div:nth-child(odd) {\n      background-color: #f9f9f9; }\n  .log div.error {\n      color: #fe767a; }\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/process-log/process-log.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/process-log/process-log.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__log_service__ = __webpack_require__("../../../../../src/app/log.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProcessLogComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2627,16 +2565,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var log_service_1 = __webpack_require__("./src/app/log.service.ts");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
 var ProcessLogComponent = (function () {
     function ProcessLogComponent(logService, bsModalRef) {
         this.logService = logService;
         this.bsModalRef = bsModalRef;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
         this.log = [];
     }
     ProcessLogComponent.prototype.ngOnInit = function () {
@@ -2655,60 +2594,42 @@ var ProcessLogComponent = (function () {
     return ProcessLogComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('logElement'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object)
+    core_1.ViewChild('logElement'),
+    __metadata("design:type", typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object)
 ], ProcessLogComponent.prototype, "logElement", void 0);
 ProcessLogComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/process-log/process-log.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/process-log/process-log.component.scss")]
+        template: __webpack_require__("./src/app/process-log/process-log.component.html"),
+        styles: [__webpack_require__("./src/app/process-log/process-log.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__log_service__["a" /* LogService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__log_service__["a" /* LogService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof log_service_1.LogService !== "undefined" && log_service_1.LogService) === "function" && _b || Object, typeof (_c = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _c || Object])
 ], ProcessLogComponent);
-
+exports.ProcessLogComponent = ProcessLogComponent;
 var _a, _b, _c;
 //# sourceMappingURL=process-log.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/process-queue/process-queue.component.html":
+/***/ "./src/app/process-queue/process-queue.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"modal-header\">\n  <button type=\"button\" class=\"btn btn-default pull-right\" (click)=\"bsModalRef.hide()\">Close</button>\n</div>\n<div class=\"modal-body\">\n  <progressbar [max]=\"queueSummary.total\" [value]=\"queueSummary.processed\" *ngIf=\"queueSummary\">\n    <span style=\"color:white; white-space:nowrap;\">{{queueSummary.processed}} / {{queueSummary.total}}</span>\n  </progressbar>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/process-queue/process-queue.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/process-queue/process-queue.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".log {\n  height: 300px;\n  overflow-y: scroll;\n  width: 100%; }\n  .log div {\n    padding: 2px 15px; }\n    .log div:nth-child(odd) {\n      background-color: #f9f9f9; }\n    .log div.error {\n      color: #fe767a; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ".log {\n  height: 300px;\n  overflow-y: scroll;\n  width: 100%; }\n  .log div {\n    padding: 2px 15px; }\n  .log div:nth-child(odd) {\n      background-color: #f9f9f9; }\n  .log div.error {\n      color: #fe767a; }\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/process-queue/process-queue.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/process-queue/process-queue.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__ = __webpack_require__("../../../../ngx-bootstrap/modal/modal-options.class.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_takeUntil__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProcessQueueComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2718,16 +2639,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var modal_options_class_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/modal-options.class.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
 var ProcessQueueComponent = (function () {
     function ProcessQueueComponent(dataService, bsModalRef) {
         this.dataService = dataService;
         this.bsModalRef = bsModalRef;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
     }
     ProcessQueueComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2746,66 +2668,42 @@ var ProcessQueueComponent = (function () {
     return ProcessQueueComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('logElement'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* ElementRef */]) === "function" && _a || Object)
+    core_1.ViewChild('logElement'),
+    __metadata("design:type", typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object)
 ], ProcessQueueComponent.prototype, "logElement", void 0);
 ProcessQueueComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'modal-content',
-        template: __webpack_require__("../../../../../src/app/process-queue/process-queue.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/process-queue/process-queue.component.scss")]
+        template: __webpack_require__("./src/app/process-queue/process-queue.component.html"),
+        styles: [__webpack_require__("./src/app/process-queue/process-queue.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap_modal_modal_options_class__["f" /* BsModalRef */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _b || Object, typeof (_c = typeof modal_options_class_1.BsModalRef !== "undefined" && modal_options_class_1.BsModalRef) === "function" && _c || Object])
 ], ProcessQueueComponent);
-
+exports.ProcessQueueComponent = ProcessQueueComponent;
 var _a, _b, _c;
 //# sourceMappingURL=process-queue.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/process/process.component.html":
+/***/ "./src/app/process/process.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<form #processForm=\"ngForm\" novalidate>\n  <div class=\"row\">\n    <div class=\"col-xs-12 col-sm-12 col-md-6\">\n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Intermediates</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.intermediates_enabled\" name=\"intermediates_enabled\" value=\"On\"> Yes\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.intermediates_enabled\" name=\"intermediates_enabled\" value=\"Off\"> No\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Outlier Removal</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.outlier_removal_enabled\" name=\"outlier_removal_enabled\" value=\"On\"> Enabled\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.outlier_removal_enabled\" name=\"outlier_removal_enabled\" value=\"Off\"> Disabled\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Thresholding</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.thresholding_enabled\" name=\"thresholding_enabled\" value=\"On\"> Enabled\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.thresholding_enabled\" name=\"thresholding_enabled\" value=\"Off\"> Disabled\n            </label>\n          </div>\n        </div>\n      </div>    \n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Filtering</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.filtering_enabled\" name=\"filtering_enabled\" value=\"On\"> Enabled\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.filtering_enabled\" name=\"filtering_enabled\" value=\"Off\"> Disabled\n            </label>\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group row\" *ngIf=\"config.process.filtering_enabled\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Filter Threshold</label>\n        <div class=\"col\">\n          <input type=\"number\" name=\"filterThreshold\" placeholder=\"7\" class=\"form-control\" [(ngModel)]=\"config.process.filter_threshold\">\n        </div>\n        <div class=\"col-3\">\n          <div class=\"btn-group\">\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.process.filter_threshold = config.process.filter_threshold - 1\"><i class=\"fa fa-minus\" aria-hidden=\"true\"></i></button>\n            <button type=\"button\" class=\"btn btn-secondary\" (click)=\"config.process.filter_threshold = config.process.filter_threshold + 1\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-xs-12 col-sm-12 col-md-6\">\n      <div class=\"form-group row\">\n        <label class=\"col-xs-12 col-md-4 col-form-label\">Data ROI</label>\n        <div class=\"col\">\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.roi_enabled\" name=\"roi_enabled\" value=\"On\"> Enabled\n            </label>\n          </div>\n          <div class=\"form-check form-check-inline\">\n            <label class=\"form-check-label\">\n              <input class=\"form-check-input\" type=\"radio\" [(ngModel)]=\"config.process.roi_enabled\" name=\"roi_enabled\" value=\"Off\"> Disabled\n            </label>\n          </div>\n          <div class=\"row\" *ngIf=\"config.process.roi_enabled == 'On'\">\n            <div class=\"col\">\n              <button type=\"button\" class=\"btn btn-secondary\" (click)=\"setROI()\" *ngIf=\"configLoaded\"><i class=\"fa fa-crop\" aria-hidden=\"true\"></i> Set ROI</button>\n            </div>\n          </div>\n        </div>\n      </div>    \n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col\">\n      <hr />\n      <div class=\"d-flex justify-content-start\">\n        <div>\n          <button type=\"button\" class=\"btn mb-1 btn-primary\" (click)=\"updateConfig()\" *ngIf=\"processForm.valid && processForm.dirty\">Update Config</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"configVisible = !configVisible\" *ngIf=\"configLoaded\">{{configVisible ? 'Hide' : 'Show'}} Config</button>    \n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"showLog()\"><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> View Log</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"showQueue()\"><i class=\"fa fa-list-ol\" aria-hidden=\"true\"></i> Queue</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"reprocess()\"><i class=\"fa fa-repeat\" aria-hidden=\"true\"></i> Reprocess</button>\n          <button type=\"button\" class=\"btn mb-1 btn-secondary\" (click)=\"exportData()\"><i class=\"fa fa-repeat\" aria-hidden=\"true\"></i> Export Data</button>\n        </div>\n        <div class=\"ml-auto p-2\" *ngIf=\"configLoaded\">\n          <button type=\"button\" class=\"btn mb-1 btn-lg btn-danger\" (click)=\"stopProcessing()\" *ngIf=\"configLoaded && processing\">Stop</button>\n          <button type=\"button\" class=\"btn mb-1 btn-lg btn-primary\" (click)=\"startProcessing()\" *ngIf=\"configLoaded && !processing && !processForm.dirty && processForm.valid\">Start</button>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\" *ngIf=\"configVisible\">\n    <div class=\"col\">\n      <pre>{{ config | json }}</pre>\n    </div>\n  </div>\n</form>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/process/process.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/process/process.component.scss":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/process/process.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/process/process.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil__ = __webpack_require__("../../../../rxjs/add/operator/takeUntil.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_takeUntil__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_service__ = __webpack_require__("../../../../../src/app/config.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pi_service__ = __webpack_require__("../../../../../src/app/pi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__process_log_process_log_component__ = __webpack_require__("../../../../../src/app/process-log/process-log.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__process_queue_process_queue_component__ = __webpack_require__("../../../../../src/app/process-queue/process-queue.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__data_roi_data_roi_component__ = __webpack_require__("../../../../../src/app/data-roi/data-roi.component.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProcessComponent; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2815,17 +2713,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+var Subject_1 = __webpack_require__("./node_modules/rxjs/_esm5/Subject.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/takeUntil.js");
+var config_service_1 = __webpack_require__("./src/app/config.service.ts");
+var pi_service_1 = __webpack_require__("./src/app/pi.service.ts");
+var data_service_1 = __webpack_require__("./src/app/data.service.ts");
+var modal_1 = __webpack_require__("./node_modules/ngx-bootstrap/modal/index.js");
+var process_log_component_1 = __webpack_require__("./src/app/process-log/process-log.component.ts");
+var process_queue_component_1 = __webpack_require__("./src/app/process-queue/process-queue.component.ts");
+var data_roi_component_1 = __webpack_require__("./src/app/data-roi/data-roi.component.ts");
 var ProcessComponent = (function () {
     function ProcessComponent(configService, piService, modalService, dataService) {
         var _this = this;
@@ -2837,13 +2736,13 @@ var ProcessComponent = (function () {
         this.processing = false;
         this.configVisible = false;
         this.configLoaded = false;
-        this.componentDestroyed = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["Subject"]();
+        this.componentDestroyed = new Subject_1.Subject();
         this.piService.processing.takeUntil(this.componentDestroyed.asObservable()).subscribe(function (processing) {
             _this.processing = processing;
         });
     }
     ProcessComponent.prototype.setROI = function () {
-        this.roiModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_10__data_roi_data_roi_component__["a" /* DataRoiComponent */], { class: 'modal-lg' });
+        this.roiModalRef = this.modalService.show(data_roi_component_1.DataRoiComponent, { class: 'modal-lg' });
     };
     ProcessComponent.prototype.updateConfig = function () {
         this.configService.updateConfig(this.config);
@@ -2870,10 +2769,10 @@ var ProcessComponent = (function () {
         this.piService.startReprocessing();
     };
     ProcessComponent.prototype.showLog = function () {
-        this.logModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_8__process_log_process_log_component__["a" /* ProcessLogComponent */], { class: 'modal-lg' });
+        this.logModalRef = this.modalService.show(process_log_component_1.ProcessLogComponent, { class: 'modal-lg' });
     };
     ProcessComponent.prototype.showQueue = function () {
-        this.queueModalRef = this.modalService.show(__WEBPACK_IMPORTED_MODULE_9__process_queue_process_queue_component__["a" /* ProcessQueueComponent */], { class: 'modal-lg' });
+        this.queueModalRef = this.modalService.show(process_queue_component_1.ProcessQueueComponent, { class: 'modal-lg' });
     };
     ProcessComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2898,35 +2797,28 @@ var ProcessComponent = (function () {
     return ProcessComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('processForm'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* NgForm */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* NgForm */]) === "function" && _a || Object)
+    core_1.ViewChild('processForm'),
+    __metadata("design:type", typeof (_a = typeof forms_1.NgForm !== "undefined" && forms_1.NgForm) === "function" && _a || Object)
 ], ProcessComponent.prototype, "processForm", void 0);
 ProcessComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Component */])({
+    core_1.Component({
         selector: 'app-process',
-        template: __webpack_require__("../../../../../src/app/process/process.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/process/process.component.scss")]
+        template: __webpack_require__("./src/app/process/process.component.html"),
+        styles: [__webpack_require__("./src/app/process/process.component.scss")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__config_service__["a" /* ConfigService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__config_service__["a" /* ConfigService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__pi_service__["a" /* PiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__pi_service__["a" /* PiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_modal__["b" /* BsModalService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_modal__["b" /* BsModalService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__data_service__["a" /* DataService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof config_service_1.ConfigService !== "undefined" && config_service_1.ConfigService) === "function" && _b || Object, typeof (_c = typeof pi_service_1.PiService !== "undefined" && pi_service_1.PiService) === "function" && _c || Object, typeof (_d = typeof modal_1.BsModalService !== "undefined" && modal_1.BsModalService) === "function" && _d || Object, typeof (_e = typeof data_service_1.DataService !== "undefined" && data_service_1.DataService) === "function" && _e || Object])
 ], ProcessComponent);
-
+exports.ProcessComponent = ProcessComponent;
 var _a, _b, _c, _d, _e;
 //# sourceMappingURL=process.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/socket.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/app/socket.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_socket_io_client__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_constants__ = __webpack_require__("../../../../../src/app/app.constants.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SocketService; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2936,20 +2828,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var io = __webpack_require__("./node_modules/socket.io-client/lib/index.js");
+var BehaviorSubject_1 = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+var app_constants_1 = __webpack_require__("./src/app/app.constants.ts");
 var SocketService = (function () {
     function SocketService(router, appConstants) {
         var _this = this;
         this.router = router;
         this.appConstants = appConstants;
-        this.connected = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["BehaviorSubject"](false);
-        this.reconnectionAttempts = new __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__["BehaviorSubject"](null);
+        this.connected = new BehaviorSubject_1.BehaviorSubject(false);
+        this.reconnectionAttempts = new BehaviorSubject_1.BehaviorSubject(null);
         this._reconnectionAttempts = 0;
-        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__(this.appConstants.serverURL);
+        this.socket = io(this.appConstants.serverURL);
         this.socket.on('connected', function (socket) {
             _this.connected.next(true);
             _this._reconnectionAttempts = 0;
@@ -2967,320 +2860,64 @@ var SocketService = (function () {
     return SocketService;
 }());
 SocketService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__app_constants__["a" /* AppConstants */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__app_constants__["a" /* AppConstants */]) === "function" && _b || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _a || Object, typeof (_b = typeof app_constants_1.AppConstants !== "undefined" && app_constants_1.AppConstants) === "function" && _b || Object])
 ], SocketService);
-
+exports.SocketService = SocketService;
 var _a, _b;
 //# sourceMappingURL=socket.service.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/environments/environment.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/environments/environment.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
-var environment = {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.environment = {
     production: false
 };
 //# sourceMappingURL=environment.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/main.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/main.ts":
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var platform_browser_dynamic_1 = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+var app_module_1 = __webpack_require__("./src/app/app.module.ts");
+var environment_1 = __webpack_require__("./src/environments/environment.ts");
+if (environment_1.environment.production) {
+    core_1.enableProdMode();
 }
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 //# sourceMappingURL=main.js.map
 
 /***/ }),
 
-/***/ "../../../../moment/locale recursive ^\\.\\/.*$":
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-var map = {
-	"./af": "../../../../moment/locale/af.js",
-	"./af.js": "../../../../moment/locale/af.js",
-	"./ar": "../../../../moment/locale/ar.js",
-	"./ar-dz": "../../../../moment/locale/ar-dz.js",
-	"./ar-dz.js": "../../../../moment/locale/ar-dz.js",
-	"./ar-kw": "../../../../moment/locale/ar-kw.js",
-	"./ar-kw.js": "../../../../moment/locale/ar-kw.js",
-	"./ar-ly": "../../../../moment/locale/ar-ly.js",
-	"./ar-ly.js": "../../../../moment/locale/ar-ly.js",
-	"./ar-ma": "../../../../moment/locale/ar-ma.js",
-	"./ar-ma.js": "../../../../moment/locale/ar-ma.js",
-	"./ar-sa": "../../../../moment/locale/ar-sa.js",
-	"./ar-sa.js": "../../../../moment/locale/ar-sa.js",
-	"./ar-tn": "../../../../moment/locale/ar-tn.js",
-	"./ar-tn.js": "../../../../moment/locale/ar-tn.js",
-	"./ar.js": "../../../../moment/locale/ar.js",
-	"./az": "../../../../moment/locale/az.js",
-	"./az.js": "../../../../moment/locale/az.js",
-	"./be": "../../../../moment/locale/be.js",
-	"./be.js": "../../../../moment/locale/be.js",
-	"./bg": "../../../../moment/locale/bg.js",
-	"./bg.js": "../../../../moment/locale/bg.js",
-	"./bn": "../../../../moment/locale/bn.js",
-	"./bn.js": "../../../../moment/locale/bn.js",
-	"./bo": "../../../../moment/locale/bo.js",
-	"./bo.js": "../../../../moment/locale/bo.js",
-	"./br": "../../../../moment/locale/br.js",
-	"./br.js": "../../../../moment/locale/br.js",
-	"./bs": "../../../../moment/locale/bs.js",
-	"./bs.js": "../../../../moment/locale/bs.js",
-	"./ca": "../../../../moment/locale/ca.js",
-	"./ca.js": "../../../../moment/locale/ca.js",
-	"./cs": "../../../../moment/locale/cs.js",
-	"./cs.js": "../../../../moment/locale/cs.js",
-	"./cv": "../../../../moment/locale/cv.js",
-	"./cv.js": "../../../../moment/locale/cv.js",
-	"./cy": "../../../../moment/locale/cy.js",
-	"./cy.js": "../../../../moment/locale/cy.js",
-	"./da": "../../../../moment/locale/da.js",
-	"./da.js": "../../../../moment/locale/da.js",
-	"./de": "../../../../moment/locale/de.js",
-	"./de-at": "../../../../moment/locale/de-at.js",
-	"./de-at.js": "../../../../moment/locale/de-at.js",
-	"./de-ch": "../../../../moment/locale/de-ch.js",
-	"./de-ch.js": "../../../../moment/locale/de-ch.js",
-	"./de.js": "../../../../moment/locale/de.js",
-	"./dv": "../../../../moment/locale/dv.js",
-	"./dv.js": "../../../../moment/locale/dv.js",
-	"./el": "../../../../moment/locale/el.js",
-	"./el.js": "../../../../moment/locale/el.js",
-	"./en-au": "../../../../moment/locale/en-au.js",
-	"./en-au.js": "../../../../moment/locale/en-au.js",
-	"./en-ca": "../../../../moment/locale/en-ca.js",
-	"./en-ca.js": "../../../../moment/locale/en-ca.js",
-	"./en-gb": "../../../../moment/locale/en-gb.js",
-	"./en-gb.js": "../../../../moment/locale/en-gb.js",
-	"./en-ie": "../../../../moment/locale/en-ie.js",
-	"./en-ie.js": "../../../../moment/locale/en-ie.js",
-	"./en-nz": "../../../../moment/locale/en-nz.js",
-	"./en-nz.js": "../../../../moment/locale/en-nz.js",
-	"./eo": "../../../../moment/locale/eo.js",
-	"./eo.js": "../../../../moment/locale/eo.js",
-	"./es": "../../../../moment/locale/es.js",
-	"./es-do": "../../../../moment/locale/es-do.js",
-	"./es-do.js": "../../../../moment/locale/es-do.js",
-	"./es.js": "../../../../moment/locale/es.js",
-	"./et": "../../../../moment/locale/et.js",
-	"./et.js": "../../../../moment/locale/et.js",
-	"./eu": "../../../../moment/locale/eu.js",
-	"./eu.js": "../../../../moment/locale/eu.js",
-	"./fa": "../../../../moment/locale/fa.js",
-	"./fa.js": "../../../../moment/locale/fa.js",
-	"./fi": "../../../../moment/locale/fi.js",
-	"./fi.js": "../../../../moment/locale/fi.js",
-	"./fo": "../../../../moment/locale/fo.js",
-	"./fo.js": "../../../../moment/locale/fo.js",
-	"./fr": "../../../../moment/locale/fr.js",
-	"./fr-ca": "../../../../moment/locale/fr-ca.js",
-	"./fr-ca.js": "../../../../moment/locale/fr-ca.js",
-	"./fr-ch": "../../../../moment/locale/fr-ch.js",
-	"./fr-ch.js": "../../../../moment/locale/fr-ch.js",
-	"./fr.js": "../../../../moment/locale/fr.js",
-	"./fy": "../../../../moment/locale/fy.js",
-	"./fy.js": "../../../../moment/locale/fy.js",
-	"./gd": "../../../../moment/locale/gd.js",
-	"./gd.js": "../../../../moment/locale/gd.js",
-	"./gl": "../../../../moment/locale/gl.js",
-	"./gl.js": "../../../../moment/locale/gl.js",
-	"./gom-latn": "../../../../moment/locale/gom-latn.js",
-	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
-	"./he": "../../../../moment/locale/he.js",
-	"./he.js": "../../../../moment/locale/he.js",
-	"./hi": "../../../../moment/locale/hi.js",
-	"./hi.js": "../../../../moment/locale/hi.js",
-	"./hr": "../../../../moment/locale/hr.js",
-	"./hr.js": "../../../../moment/locale/hr.js",
-	"./hu": "../../../../moment/locale/hu.js",
-	"./hu.js": "../../../../moment/locale/hu.js",
-	"./hy-am": "../../../../moment/locale/hy-am.js",
-	"./hy-am.js": "../../../../moment/locale/hy-am.js",
-	"./id": "../../../../moment/locale/id.js",
-	"./id.js": "../../../../moment/locale/id.js",
-	"./is": "../../../../moment/locale/is.js",
-	"./is.js": "../../../../moment/locale/is.js",
-	"./it": "../../../../moment/locale/it.js",
-	"./it.js": "../../../../moment/locale/it.js",
-	"./ja": "../../../../moment/locale/ja.js",
-	"./ja.js": "../../../../moment/locale/ja.js",
-	"./jv": "../../../../moment/locale/jv.js",
-	"./jv.js": "../../../../moment/locale/jv.js",
-	"./ka": "../../../../moment/locale/ka.js",
-	"./ka.js": "../../../../moment/locale/ka.js",
-	"./kk": "../../../../moment/locale/kk.js",
-	"./kk.js": "../../../../moment/locale/kk.js",
-	"./km": "../../../../moment/locale/km.js",
-	"./km.js": "../../../../moment/locale/km.js",
-	"./kn": "../../../../moment/locale/kn.js",
-	"./kn.js": "../../../../moment/locale/kn.js",
-	"./ko": "../../../../moment/locale/ko.js",
-	"./ko.js": "../../../../moment/locale/ko.js",
-	"./ky": "../../../../moment/locale/ky.js",
-	"./ky.js": "../../../../moment/locale/ky.js",
-	"./lb": "../../../../moment/locale/lb.js",
-	"./lb.js": "../../../../moment/locale/lb.js",
-	"./lo": "../../../../moment/locale/lo.js",
-	"./lo.js": "../../../../moment/locale/lo.js",
-	"./lt": "../../../../moment/locale/lt.js",
-	"./lt.js": "../../../../moment/locale/lt.js",
-	"./lv": "../../../../moment/locale/lv.js",
-	"./lv.js": "../../../../moment/locale/lv.js",
-	"./me": "../../../../moment/locale/me.js",
-	"./me.js": "../../../../moment/locale/me.js",
-	"./mi": "../../../../moment/locale/mi.js",
-	"./mi.js": "../../../../moment/locale/mi.js",
-	"./mk": "../../../../moment/locale/mk.js",
-	"./mk.js": "../../../../moment/locale/mk.js",
-	"./ml": "../../../../moment/locale/ml.js",
-	"./ml.js": "../../../../moment/locale/ml.js",
-	"./mr": "../../../../moment/locale/mr.js",
-	"./mr.js": "../../../../moment/locale/mr.js",
-	"./ms": "../../../../moment/locale/ms.js",
-	"./ms-my": "../../../../moment/locale/ms-my.js",
-	"./ms-my.js": "../../../../moment/locale/ms-my.js",
-	"./ms.js": "../../../../moment/locale/ms.js",
-	"./my": "../../../../moment/locale/my.js",
-	"./my.js": "../../../../moment/locale/my.js",
-	"./nb": "../../../../moment/locale/nb.js",
-	"./nb.js": "../../../../moment/locale/nb.js",
-	"./ne": "../../../../moment/locale/ne.js",
-	"./ne.js": "../../../../moment/locale/ne.js",
-	"./nl": "../../../../moment/locale/nl.js",
-	"./nl-be": "../../../../moment/locale/nl-be.js",
-	"./nl-be.js": "../../../../moment/locale/nl-be.js",
-	"./nl.js": "../../../../moment/locale/nl.js",
-	"./nn": "../../../../moment/locale/nn.js",
-	"./nn.js": "../../../../moment/locale/nn.js",
-	"./pa-in": "../../../../moment/locale/pa-in.js",
-	"./pa-in.js": "../../../../moment/locale/pa-in.js",
-	"./pl": "../../../../moment/locale/pl.js",
-	"./pl.js": "../../../../moment/locale/pl.js",
-	"./pt": "../../../../moment/locale/pt.js",
-	"./pt-br": "../../../../moment/locale/pt-br.js",
-	"./pt-br.js": "../../../../moment/locale/pt-br.js",
-	"./pt.js": "../../../../moment/locale/pt.js",
-	"./ro": "../../../../moment/locale/ro.js",
-	"./ro.js": "../../../../moment/locale/ro.js",
-	"./ru": "../../../../moment/locale/ru.js",
-	"./ru.js": "../../../../moment/locale/ru.js",
-	"./sd": "../../../../moment/locale/sd.js",
-	"./sd.js": "../../../../moment/locale/sd.js",
-	"./se": "../../../../moment/locale/se.js",
-	"./se.js": "../../../../moment/locale/se.js",
-	"./si": "../../../../moment/locale/si.js",
-	"./si.js": "../../../../moment/locale/si.js",
-	"./sk": "../../../../moment/locale/sk.js",
-	"./sk.js": "../../../../moment/locale/sk.js",
-	"./sl": "../../../../moment/locale/sl.js",
-	"./sl.js": "../../../../moment/locale/sl.js",
-	"./sq": "../../../../moment/locale/sq.js",
-	"./sq.js": "../../../../moment/locale/sq.js",
-	"./sr": "../../../../moment/locale/sr.js",
-	"./sr-cyrl": "../../../../moment/locale/sr-cyrl.js",
-	"./sr-cyrl.js": "../../../../moment/locale/sr-cyrl.js",
-	"./sr.js": "../../../../moment/locale/sr.js",
-	"./ss": "../../../../moment/locale/ss.js",
-	"./ss.js": "../../../../moment/locale/ss.js",
-	"./sv": "../../../../moment/locale/sv.js",
-	"./sv.js": "../../../../moment/locale/sv.js",
-	"./sw": "../../../../moment/locale/sw.js",
-	"./sw.js": "../../../../moment/locale/sw.js",
-	"./ta": "../../../../moment/locale/ta.js",
-	"./ta.js": "../../../../moment/locale/ta.js",
-	"./te": "../../../../moment/locale/te.js",
-	"./te.js": "../../../../moment/locale/te.js",
-	"./tet": "../../../../moment/locale/tet.js",
-	"./tet.js": "../../../../moment/locale/tet.js",
-	"./th": "../../../../moment/locale/th.js",
-	"./th.js": "../../../../moment/locale/th.js",
-	"./tl-ph": "../../../../moment/locale/tl-ph.js",
-	"./tl-ph.js": "../../../../moment/locale/tl-ph.js",
-	"./tlh": "../../../../moment/locale/tlh.js",
-	"./tlh.js": "../../../../moment/locale/tlh.js",
-	"./tr": "../../../../moment/locale/tr.js",
-	"./tr.js": "../../../../moment/locale/tr.js",
-	"./tzl": "../../../../moment/locale/tzl.js",
-	"./tzl.js": "../../../../moment/locale/tzl.js",
-	"./tzm": "../../../../moment/locale/tzm.js",
-	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
-	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
-	"./tzm.js": "../../../../moment/locale/tzm.js",
-	"./uk": "../../../../moment/locale/uk.js",
-	"./uk.js": "../../../../moment/locale/uk.js",
-	"./ur": "../../../../moment/locale/ur.js",
-	"./ur.js": "../../../../moment/locale/ur.js",
-	"./uz": "../../../../moment/locale/uz.js",
-	"./uz-latn": "../../../../moment/locale/uz-latn.js",
-	"./uz-latn.js": "../../../../moment/locale/uz-latn.js",
-	"./uz.js": "../../../../moment/locale/uz.js",
-	"./vi": "../../../../moment/locale/vi.js",
-	"./vi.js": "../../../../moment/locale/vi.js",
-	"./x-pseudo": "../../../../moment/locale/x-pseudo.js",
-	"./x-pseudo.js": "../../../../moment/locale/x-pseudo.js",
-	"./yo": "../../../../moment/locale/yo.js",
-	"./yo.js": "../../../../moment/locale/yo.js",
-	"./zh-cn": "../../../../moment/locale/zh-cn.js",
-	"./zh-cn.js": "../../../../moment/locale/zh-cn.js",
-	"./zh-hk": "../../../../moment/locale/zh-hk.js",
-	"./zh-hk.js": "../../../../moment/locale/zh-hk.js",
-	"./zh-tw": "../../../../moment/locale/zh-tw.js",
-	"./zh-tw.js": "../../../../moment/locale/zh-tw.js"
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
+module.exports = __webpack_require__("./src/main.ts");
+
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
-/***/ }),
-
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("../../../../../src/main.ts");
-
-
 /***/ })
 
-},[2]);
+},[0]);
 //# sourceMappingURL=main.bundle.js.map

@@ -90,41 +90,22 @@
     </div>
     <div class="col-md-6">
       <div class="form-group row" *ngIf="configLoaded">
-        <label class="col-xs-12 col-md-4 col-form-label">USB Stick / External</label>
-        <div class="col">
-          <select 
-            class="form-control" name="storageOption" 
-            #storageOption="ngModel" [(ngModel)]="config.capture.external_storage" 
-            (change)="updateOutputDir()" required>
-            <option value="" *ngIf="storageList?.length == 0">None available</option>
-            <option value="" *ngIf="storageList?.length > 0">Select storage option</option>
-            <option *ngFor="let option of storageList" [value]="option">{{option}}</option>
-          </select> 
-          <small class="form-text text-danger" *ngIf="storageOption.errors?.required">
-            USB stick or external storage required
-          </small>
-          <div class="row mt-1">
-            <div class="col">
-              <button class="btn btn-secondary btn-sm" type="button" (click)="ejectExternalStorage()" *ngIf="configLoaded && config.capture.external_storage">Eject <i class="fa fa-eject" aria-hidden="true"></i></button>
-              <button class="btn btn-secondary btn-sm" type="button" (click)="refresh()" *ngIf="configLoaded">Refresh List <i class="fa fa-refresh" aria-hidden="true"></i></button>          
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row" *ngIf="configLoaded">
         <label class="col-xs-12 col-md-4 col-form-label">Sequence Name</label>
         <div class="col">
           <input type="text" name="captureSequenceName" class="form-control" 
-            [(ngModel)]="config.capture.sequence_name" #captureSequenceName="ngModel" required (keyup)="updateOutputDir()">
+            [(ngModel)]="config.capture.sequence_name" #captureSequenceName="ngModel" required>
           <small class="form-text text-danger" *ngIf="captureSequenceName.errors?.required">
             Sequence name is required
           </small>
         </div>
       </div>
-      <div class="form-group row" *ngIf="configLoaded && config.capture.external_storage && config.capture.sequence_name">
+      <div class="form-group row" *ngIf="configLoaded">
         <label class="col-xs-12 col-md-4 col-form-label">Output Directory</label>
         <div class="col">
-          <input type="text" name="captureOutputDir" class="form-control" [value]="config.capture.output_dir + '/' + config.capture.sequence_name" disabled="disabled">
+          <input type="text" name="captureOutputDir" class="form-control" [(ngModel)]="config.capture.output_dir" required>
+          <small class="form-text" *ngIf="config.capture.output_dir">
+            Files saved to: {{config.capture.output_dir + '/' + config.capture.sequence_name}}
+          </small>          
         </div>
       </div>
       <div class="form-group row" *ngIf="configLoaded">
@@ -168,16 +149,15 @@
       <hr />
       <div class="d-flex justify-content-start">
         <div>
-          <button type="button" class="btn mb-1" [ngClass]="{'btn-primary':!configLoaded, 'btn-secondary':configLoaded}" (click)="readConfig()">Read Config</button><span *ngIf="!configLoaded"> or </span>
-          <button type="button" class="btn mb-1 btn-secondary" *ngIf="!configLoaded" (click)="readConfig()">Create New</button>
+          <button type="button" class="btn mb-1" [ngClass]="{'btn-primary':!configLoaded, 'btn-secondary':configLoaded}" (click)="readConfig()">Read Config</button>
           <button type="button" class="btn mb-1 btn-primary" (click)="updateConfig()" *ngIf="configLoaded && configForm.valid && configForm.dirty">Update Config</button>
           <button type="button" class="btn mb-1 btn-secondary" (click)="configVisible = !configVisible" *ngIf="configLoaded">{{configVisible ? 'Hide' : 'Show'}} Config</button>
           <button type="button" class="btn mb-1 btn-secondary" (click)="showLog()" *ngIf="configLoaded"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Log</button>
           <button type="button" class="btn mb-1 btn-secondary" (click)="showLive()" *ngIf="configLoaded && !capturing"><i class="fa fa-camera" aria-hidden="true"></i> Live</button>
         </div>
         <div class="ml-auto p-2" *ngIf="configLoaded">
-          <button type="button" class="btn btn-lg mb-1 btn-secondary" (click)="showPreview()" *ngIf="!capturing && config.capture.external_storage && !configForm.dirty && configForm.valid">Preview</button>
-          <button type="button" class="btn btn-lg mb-1 btn-primary" (click)="startCapture()" *ngIf="storageList && config.capture.external_storage && !capturing && !configForm.dirty && configForm.valid">Start</button>
+          <button type="button" class="btn btn-lg mb-1 btn-secondary" (click)="showPreview()" *ngIf="!capturing && !configForm.dirty && configForm.valid">Preview</button>
+          <button type="button" class="btn btn-lg mb-1 btn-primary" (click)="startCapture()" *ngIf="!capturing && !configForm.dirty && configForm.valid">Start</button>
           <button type="button" class="btn btn-lg mb-1 btn-danger" (click)="stopCapture()" *ngIf="capturing">Stop</button>
         </div>
       </div>

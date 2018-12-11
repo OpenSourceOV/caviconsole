@@ -33,6 +33,17 @@ export class AdvancedComponent implements OnInit {
     
   }
 
+  doWifiAP() {
+    console.log("Doing wifi AP")
+    this.wifiConfig.mode = 'AP'; 
+    this.updateWifi();
+  }
+  
+  doWifiNetwork() {
+    console.log("Doing wifi network")
+    this.wifiConfig.mode = 'network'; 
+  }
+
   updateConfig() {
     this.configService.updateConfig(this.config);
   }

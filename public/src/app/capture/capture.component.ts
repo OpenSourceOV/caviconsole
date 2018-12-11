@@ -33,7 +33,6 @@ export class CaptureComponent implements OnInit, OnChanges, OnDestroy {
   capturing: boolean = false;
   configVisible: boolean = false;
   configValid: boolean = false;
-  storageList: any[] = [];
   outputPath: string = '';
   private componentDestroyed: Subject<boolean> = new Subject<boolean>();
 
@@ -69,9 +68,6 @@ export class CaptureComponent implements OnInit, OnChanges, OnDestroy {
     this.piService.capturing.takeUntil(this.componentDestroyed.asObservable()).subscribe((capturing: boolean) => {
       this.capturing = capturing;
     })
-    this.piService.storageList.takeUntil(this.componentDestroyed.asObservable()).subscribe((storageList) => {
-      this.storageList = storageList;
-    })    
     this.configForm.valueChanges.takeUntil(this.componentDestroyed.asObservable()).subscribe((change) => {
       console.log("Change!", change);
       // this.configForm.form.markAsDirty();
@@ -120,10 +116,6 @@ export class CaptureComponent implements OnInit, OnChanges, OnDestroy {
   startCapture() {
     console.log("Starting capture");
     this.piService.startCapture();
-  }
-
-  refresh() {
-    this.piService.getStorageList();
   }
 
   showLive() {

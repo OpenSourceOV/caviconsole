@@ -47,38 +47,12 @@ module.exports = (app, configModule, io) => {
     module.streamingProc = spawn('/home/pi/mjpg-streamer/mjpg_streamer', streamerServerArgs);
     console.log("Streaming server command: ", '/home/pi/mjpg-streamer/mjpg_streamer ' + streamerServerArgs.join(" "));
 
-    // var streamerArgs = [
-    //   "--nopreview",
-    //   "-w", "640",
-    //   "-h", "480",
-    //   "-q", "50",
-    //   "-o", "/tmp/stream/pic.jpg",
-    //   "-tl", "100",
-    //   "-t", "9999999",
-    //   "-th", "0:0:0"
-    // ];
-
-    // module.streamingProc = spawn('raspistill', streamerArgs);
-    // console.log("Streaming server command: ", 'raspistill ' + streamerArgs.join(" "));
-
-    // console.log("Streaming!!");
     setTimeout(() => {
       module.streamingActive = true;
       module.emitPreviewStatus();
     }, 3000)
 
-    // module.streamingProc.stdout.on('data', (data) => {
-    //   console.log(`stdout: ${data}`);
-    //   io.emit('capture:log', String(data).replace(/[\n\r]+/g, ''));
-    //   if(module.streamingActive == false) {
-    //     console.log("Streaming started...");
-    //     module.streamingActive = true;
-    //     module.emitPreviewStatus();
-    //   }
-    // });
-
     module.streamingProc.stderr.on('data', (data) => {
-      // Non-errors come throught stderror unfortunately
       console.log(`stderr: ${data}`);
     });
 
