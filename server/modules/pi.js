@@ -48,6 +48,14 @@ module.exports = function (app, io) {
       module.shutdownPi();
     });
   
+    socket.on('pi:setTime', function(timestamp) {
+      let currentTime = new Date(timestamp);
+      console.log("Setting time");
+      let timeCmd = `sudo date -s "${currentTime.toString()}"`
+      console.log(timeCmd);
+      exec(timeCmd);
+    });
+
     socket.on('pi:light', (lightOn) => {
       module.light(lightOn);
       io.emit('pi:lightStatus', lightOn);    

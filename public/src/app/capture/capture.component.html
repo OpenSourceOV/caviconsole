@@ -154,6 +154,7 @@
           <button type="button" class="btn mb-1 btn-secondary" (click)="configVisible = !configVisible" *ngIf="configLoaded">{{configVisible ? 'Hide' : 'Show'}} Config</button>
           <button type="button" class="btn mb-1 btn-secondary" (click)="showLog()" *ngIf="configLoaded"><i class="fa fa-file-text-o" aria-hidden="true"></i> View Log</button>
           <button type="button" class="btn mb-1 btn-secondary" (click)="showLive()" *ngIf="configLoaded && !capturing"><i class="fa fa-camera" aria-hidden="true"></i> Live</button>
+          <button type="button" class="btn mb-1 btn-secondary" (click)="syncTime()" *ngIf="configLoaded && !capturing"><i class="fa fa-clock-o" aria-hidden="true"></i> Sync</button>
         </div>
         <div class="ml-auto p-2" *ngIf="configLoaded">
           <button type="button" class="btn btn-lg mb-1 btn-secondary" (click)="showPreview()" *ngIf="!capturing && !configForm.dirty && configForm.valid">Preview</button>

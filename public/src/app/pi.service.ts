@@ -69,6 +69,11 @@ export class PiService {
     this.socketService.socket.emit('storage:unmount', device);
   }
 
+  syncTime() {
+    console.log("...syncing time...")
+    this.socketService.socket.emit('pi:setTime', new Date().getTime());
+  }
+
   getLightStatus() {
     this.socketService.socket.emit('pi:readLightStatus');    
   }

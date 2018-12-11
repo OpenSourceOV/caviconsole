@@ -118,6 +118,11 @@ export class CaptureComponent implements OnInit, OnChanges, OnDestroy {
     this.piService.startCapture();
   }
 
+  syncTime() {
+    console.log("Syncing time...");
+    this.piService.syncTime();
+  }
+
   showLive() {
     this.liveModalRef = this.modalService.show(LiveComponent, {class: 'modal-lg'});
   }
