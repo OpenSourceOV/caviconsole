@@ -31,6 +31,7 @@ import { ModalModule, ProgressbarModule } from 'ngx-bootstrap';
 import { PointEditorComponent } from './point-editor/point-editor.component';
 
 import { AppConstants } from './app.constants';
+import { WindowService } from './window.service';
 
 const appRoutes: Routes = [
   { path: '',
@@ -91,7 +92,7 @@ const appRoutes: Routes = [
     LogService,
     ConfigGuard,
     AppConstants,
-    { provide: Window, useValue: window },
+    WindowService,
   ],
   bootstrap: [AppComponent]
 })
