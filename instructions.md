@@ -12,7 +12,7 @@ Caviconsole is a GUI (graphical user interface) for controlling image capture an
 ### Prerequisites
 
 * Follow the instructions at [OpenSourceOV/raspberry-pi-setup](https://github.com/OpenSourceOV/raspberry-pi-setup.git) to install and setup the Raspberry Pi.
-* **Ensure that you are running at least v4.4 ('Stretch') of the Raspbian operating system**. These instructions will not work with versions < 4.4 which have an earlier version of node that must be updated.
+* **Ensure that you are running at least v4.4 ('Stretch') of the Raspbian operating system**. These instructions will not work with versions < 4.4, which have an earlier version of node.
 * Follow the instructions at [OpenSourceOV/cavicapture](https://github.com/OpenSourceOV/cavicapture.git) to install Cavicapture v2.
 * Raspberry Pi is connected to the internet.
 
@@ -45,9 +45,9 @@ Commands are entered into the terminal line by line followed by a carriage retur
 
 4. Install text editor. Skip this step if you are familiar with vi or another text editor. 
 
-  ```
-  sudo apt-get install vim
-  ```
+    ```
+    sudo apt-get install vim
+    ```
 
 ### Install programs and scripts and setup networking
 
@@ -114,6 +114,8 @@ Commands are entered into the terminal line by line followed by a carriage retur
     
     Press ESC then type ':wq' (without single quotes) and press ENTER
 
+    More information about using the vim text editor can be found [here](https://www.howtoforge.com/vim-basics).
+
 6. Reboot
 
     Type 'reboot' in the console or click the Raspberry icon top left and click 'Shutdown' and then select 'Reboot'.
@@ -125,11 +127,11 @@ Commands are entered into the terminal line by line followed by a carriage retur
 
 Caviconsole interfaces with the cavicapture v2 programs (cavicapture and caviprocess) which do all the work capturing and processing the images. Caviconsole provides a web-based user interface for streaming a live feed from the camera, editing the cavicapture configuration file using a form, stopping and starting the scripts and displaying the results. Cavicapture does not require the GUI, likewise you can just use Caviconsole to edit the configuration file and run the cavicapture and caviprocess scripts manually from the console.
 
-**Use one or more configuration files?**
+**Use one or multiple configuration files?**
 
 One advantage of having a separate configuration file is you can save multiple versions for different sequences, projects etc and load into caviconsole whichever version is relevant for the current sequence. In practice you may find it easier/simpler/less confusing to have just one configuration file that everyone edits. 
 
-Start by copying the example configuration file in the caviconsole directory to somewhere else easily accessible, like the Desktop. Use the file manager (File icon on top task bar) and find the caviconsole directory (/home/pi/caviconsole), right-click the 'default-config.ini' file and click 'copy' then right-click the Desktop (or wherever) and click 'Paste'. Rename the file to something like 'sequence.config'. If you mess up this file you'll always have the original default-config.ini to use as a backup/reference.
+Regardless of the setup, start by copying the example configuration file in the caviconsole directory to somewhere else easily accessible, like the Desktop. Use the file manager (File icon on top task bar) and find the caviconsole directory (/home/pi/caviconsole), right-click the 'default-config.ini' file and click 'copy' then right-click the Desktop (or wherever) and click 'Paste'. Rename the file to something like 'sequence.config'. This way if you mess up your main file you'll always have the original default-config.ini to use as a backup/reference.
 
 Caviconsole has four sections/screens:
 
@@ -159,7 +161,7 @@ Caviconsole has four sections/screens:
 
 ### Usage
 
-Caviconsole is a web-based interface that runs over web protocols. This means that caviconsole can be accessed from the web browser on the Pi itself or **from any computer (or device, such as an ipad) connected to the same network as the Raspberry Pi**. This provides great flexibility in controlling multiple clamps from a single computer and running the pies/clamps in 'headless' mode where the pies can be controlled without any peripherals.
+Caviconsole is a web-based interface that runs over internet protocols. This means that caviconsole can be accessed from the web browser on the Pi itself or **from any computer (or device, such as an ipad) connected to the same network as the Raspberry Pi**. This provides great flexibility in controlling multiple clamps from a single computer, and running pies+clamps in 'headless' mode where the pies can be controlled without any peripherals attached.
 
 Some things to consider:
 
@@ -219,9 +221,15 @@ Some things to consider:
 
 6. The live feed doesn't apply any of the image capture settings. Click the 'Preview' button to capture an image using the capture settings so you can confirm the settings are correct. 
 
-7. Click the 'Start' button to initiate the capture sequence.
+7. If you are remotely using caviconsole e.g. from a laptop click the 'Sync' button with the clock symbol to synchronise the Raspberry Pi's time with the time on your laptop or whatever device you're using to connect. If you're using caviconsole from the Raspberry Pi directly, and the Pi doesn't have an internet connection, then open up a new terminal window and set the time manually:
 
-8. Click the 'View log' button and check for errors while it captures the first couple of images.
+  ```
+  sudo date -s "Feb 22 2017 08:10"
+  ```
+
+8. Click the 'Start' button to initiate the capture sequence.
+
+9. Click the 'View log' button and check for errors while it captures the first couple of images.
 
     ![](./images/capture_log.jpg)
 
