@@ -4,7 +4,7 @@ module.exports = (app, configModule) => {
   var _ = require("underscore")._
   var fs = require("fs")
   var exec = require("child_process").exec
-  var wifiConfig = require('../../wifi-config-example.json');
+  var wifiConfig = require('../../wifi-config.json');
   var async = require("async")
 
   // Underscore config

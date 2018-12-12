@@ -1,3 +1,3 @@
-# Caviconsole
+# Caviconsole v1
 
-[Installation instructions - new install](./installation.md)
+[Click here for instructions](./instructions.md)
