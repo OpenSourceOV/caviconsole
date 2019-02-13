@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, Input, ViewChild, ElementRef } from '@angular/core';
-import Chart from 'chart.js';
+import { Chart } from 'chart.js';
 import { DataService, DataItem, DataPoint } from '../../../data.service';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
