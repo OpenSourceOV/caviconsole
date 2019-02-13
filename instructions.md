@@ -12,7 +12,7 @@ Caviconsole is a GUI (graphical user interface) for controlling image capture an
 ### Prerequisites
 
 * Follow the instructions at [OpenSourceOV/raspberry-pi-setup](https://github.com/OpenSourceOV/raspberry-pi-setup.git) to install and setup the Raspberry Pi.
-* **Ensure that you are running at least v4.4 ('Stretch') of the Raspbian operating system**. These instructions will not work with versions < 4.4, which have an earlier version of node.
+* **Ensure that you are running at least v4.1 ('Stretch') of the Raspbian operating system**. These instructions will not work with versions < 4.1, which have an earlier version of node.
 * Follow the instructions at [OpenSourceOV/cavicapture](https://github.com/OpenSourceOV/cavicapture.git) to install Cavicapture v2.
 * Raspberry Pi is connected to the internet.
 
